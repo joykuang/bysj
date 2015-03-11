@@ -1,0 +1,37 @@
+[ 2015-03-09T06:29:17+08:00 ] 188.138.17.205 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000146s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001126s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001231s ]
+NOTIC: [8192] Function split() is deprecated F:\XAMPP\htdocs\_Yueruan\Common\Common\function.php 第 9 行.
+NOTIC: [8] Undefined index: HTTP_USER_AGENT F:\XAMPP\htdocs\_Yueruan\Home\Controller\IndexController.class.php 第 10 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001050s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001148s ]
+
+[ 2015-03-09T07:27:16+08:00 ] 182.118.53.149 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000144s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001117s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001228s ]
+NOTIC: [8192] Function split() is deprecated F:\XAMPP\htdocs\_Yueruan\Common\Common\function.php 第 9 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001469s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001619s ]
+
+[ 2015-03-09T07:40:50+08:00 ] 42.156.250.116 http://www.taobao.com/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000224s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000654s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002580s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002976s ]
+NOTIC: [8192] Function split() is deprecated F:\XAMPP\htdocs\_Yueruan\Common\Common\function.php 第 9 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004031s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004414s ]
+

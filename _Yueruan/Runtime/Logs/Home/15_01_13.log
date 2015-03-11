@@ -1,0 +1,98 @@
+[ 2015-01-13T18:27:17+08:00 ] 192.168.1.111 /?q=qyKKnsF75ecrv3vEtWTNNWpIWQzaQ_uTHjjbIms7isnXAiQOCmbTDj2r8hJJM84s_dgf68PSpYBZG2VB7gFzakfqaxAfeLhmJYCg5RuwtpxjVf0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000158s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.019812s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.020034s ]
+NOTIC: [8192] Function split() is deprecated D:\WWW\_Yueruan\Common\Common\function.php 第 9 行.
+NOTIC: [8] Undefined index: HTTP_USER_AGENT D:\WWW\_Yueruan\Home\Controller\IndexController.class.php 第 10 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.020431s ]
+INFO: [ app_end ] --END-- [ RunTime:0.020591s ]
+
+[ 2015-01-13T22:58:38+08:00 ] 202.105.21.220 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000125s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000849s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000943s ]
+NOTIC: [8192] Function split() is deprecated D:\WWW\_Yueruan\Common\Common\function.php 第 9 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000863s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000950s ]
+
+[ 2015-01-13T22:58:38+08:00 ] 202.105.21.220 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000112s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000705s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000790s ]
+NOTIC: [8192] Function split() is deprecated D:\WWW\_Yueruan\Common\Common\function.php 第 9 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000930s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001022s ]
+
+[ 2015-01-13T22:58:43+08:00 ] 202.105.21.220 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000183s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001166s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001285s ]
+NOTIC: [8192] Function split() is deprecated D:\WWW\_Yueruan\Common\Common\function.php 第 9 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000846s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000935s ]
+
+[ 2015-01-13T22:58:43+08:00 ] 202.105.21.220 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000114s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000716s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000803s ]
+NOTIC: [8192] Function split() is deprecated D:\WWW\_Yueruan\Common\Common\function.php 第 9 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000738s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000822s ]
+
+[ 2015-01-13T22:58:43+08:00 ] 202.105.21.220 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000112s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000700s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000789s ]
+NOTIC: [8192] Function split() is deprecated D:\WWW\_Yueruan\Common\Common\function.php 第 9 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000740s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000824s ]
+
+[ 2015-01-13T22:58:43+08:00 ] 202.105.21.220 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000170s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000751s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000841s ]
+NOTIC: [8192] Function split() is deprecated D:\WWW\_Yueruan\Common\Common\function.php 第 9 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000759s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000840s ]
+
+[ 2015-01-13T23:18:28+08:00 ] 192.168.1.111 /?q=ryKKnsF75esG057wjwMO-ppMg9qL7zdrHijbIms7isnXAiQOEmbTDj2r8hJJM84s_dgf68PSpYBpG2VB7eFzakfqaxAfeLhmnHSHgR0aqDzaV90
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000190s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002271s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002442s ]
+NOTIC: [8192] Function split() is deprecated D:\WWW\_Yueruan\Common\Common\function.php 第 9 行.
+NOTIC: [8] Undefined index: HTTP_USER_AGENT D:\WWW\_Yueruan\Home\Controller\IndexController.class.php 第 10 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001804s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001955s ]
+

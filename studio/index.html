@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>绿青现代农业</title>
+	    <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <!--link rel="icon" href=" "-->
+        <link rel="stylesheet" href="/Public/plugins/uikit-2.16.2/css/uikit.min.css" />
+		<link rel="stylesheet" href="/Public/plugins/uikit-2.16.2/css/components/slideshow.min.css" />
+		<link rel="stylesheet" href="/Public/plugins/uikit-2.16.2/css/components/slidenav.min.css" />
+		<link rel="stylesheet" href="/Public/plugins/uikit-2.16.2/css/components/dotnav.min.css" />
+		<link rel="stylesheet" href="/lq/style.css" />
+        <script src="/Public/plugins/jquery/jquery-1.11.2.min.js"></script>
+        <script src="/Public/plugins/uikit-2.16.2/js/uikit.min.js"></script>
+		<script src="/Public/plugins/uikit-2.16.2/js/components/slideshow.min.js"></script>		 
+    </head>
+    <body>
+	
+	<div class="nav">
+		<div class="uk-container uk-container-center">
+			<div class="uk-grid">
+				<div class="uk-width-1-1">
+					<span class="logo" style="display: none;"></span>
+					<a class="nav-link active">网站首页</a>
+					<a class="nav-link">公司动态</a>
+					<a class="nav-link">新闻通告</a>
+					<a class="nav-link">荣誉奖状</a>
+					<a class="nav-link">人才招聘</a>
+					<a class="nav-link">关于我们</a>				
+					<form class="search">
+						<input name="s" type="text" class="search-text"></input>
+						<a href="javascript:;" class="search-btn">搜索</a> 
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="slider">
+		<div class="uk-slidenav-position" data-uk-slideshow>
+			<ul class="uk-slideshow">
+				<li><img src="/lq/img/slide01.jpg"></li>
+				<li><img src="/lq/img/slide02.jpg"></li>
+				<li><img src="/lq/img/slide03.jpg"></li>
+				<li><img src="/lq/img/slide04.jpg"></li>
+				<li><img src="/lq/img/slide05.jpg"></li>
+				<li><img src="/lq/img/slide06.jpg"></li>
+				<li><img src="/lq/img/slide07.jpg"></li>
+				<li><img src="/lq/img/slide08.jpg"></li>
+			</ul>
+			<a href="" class="uk-slidenav uk-slidenav-previous" data-uk-slideshow-item="previous"></a>
+			<a href="" class="uk-slidenav uk-slidenav-next" data-uk-slideshow-item="next"></a>
+			<ul class="uk-dotnav">
+				<li data-uk-slideshow-item="0"><a href="javascript:;"></a></li>
+				<li data-uk-slideshow-item="1"><a href="javascript:;"></a></li>
+				<li data-uk-slideshow-item="2"><a href="javascript:;"></a></li>
+				<li data-uk-slideshow-item="3"><a href="javascript:;"></a></li>
+				<li data-uk-slideshow-item="4"><a href="javascript:;"></a></li>
+				<li data-uk-slideshow-item="5"><a href="javascript:;"></a></li>
+				<li data-uk-slideshow-item="6"><a href="javascript:;"></a></li>
+				<li data-uk-slideshow-item="7"><a href="javascript:;"></a></li>
+			</ul>
+		</div>		
+	</div>
+	
+	
+	<div class="footer">
+        <div class="uk-container uk-container-center">    
+			<div class="uk-grid">
+				<ul class="uk-width-1-6">
+					<h3>产品中心</h3>
+					<li><a>XXX牌农药</a></li>
+					<li><a>YYY牌农药</a></li>
+					<li><a>ZZZ牌农药</a></li>
+					<li><a>AAA牌肥料</a></li>
+					<li><a>BBB牌肥料</a></li>
+				</ul>
+					
+				<ul class="uk-width-1-6">
+					<h3>关于我们</h3>
+					<li><a>公司简介</a></li>
+					<li><a>资质荣誉</a></li>
+					<li><a>公司历程</a></li>
+					<li><a>公司理念</a></li>
+					<li><a>人才招聘</a></li>
+				</ul>
+					
+				<ul class="uk-width-1-6">
+					<h3>服务咨询</h3>
+					<li><a>XXX牌农药</a></li>
+					<li><a>YYY牌农药</a></li>
+					<li><a>ZZZ牌农药</a></li>
+					<li><a>AAA牌肥料</a></li>
+					<li><a>BBB牌肥料</a></li>
+				</ul>
+					
+				<ul class="uk-width-1-6"></ul>
+					
+				<ul class="uk-width-1-3 uk-float-right">
+					<h3>联系我们</h3>
+					<li>咨询热线：(0750)2233445</li>
+					<li>在线QQ：123456789</li>
+					<li>微信账号：XXXXXX</li>
+					<li>电子邮箱：xxx@xxx.com</li>
+					<li>通讯地址：广东省湛江市XXXX</li>
+				</ul>         
+			</div>
+		</div>	
+	</div>
+	
+		<div class="copyright">
+			<div class="uk-container uk-container-center">
+				<div class="uk-grid">
+				<p class="uk-width-1-1">Copyright &copy; 绿青现代农业 2014 <a class="uk-float-right">技术支持：悦软工作室</a></p>
+				</div>
+			</div>
+		</div>
+
+		<script>
+		$(function(){
+			var w = $(window).width();
+			$('[data-uk-slideshow]').css('width', w + 'px;');
+		});
+		</script>
+    </body>
+</html>
+

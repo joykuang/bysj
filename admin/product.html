@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>我的网站 &rsaquo;&rsaquo; 绿青网站管理系统 @Powered By 悦软工作室(Yueruan Studio)</title><!--
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+        <link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon.png">
+        -->
+        <!--  jQuery库  -->      
+        <script src="/Public/plugins/jquery/jquery-1.11.2.min.js?ver=150208"></script>     
+        <!--  UIKit 前端库  -->          
+        <link href="/Public/plugins/uikit-2.16.2/css/uikit.almost-flat.min.css?ver=150208" rel="stylesheet">        
+        <script src="/Public/plugins/uikit-2.16.2/js/uikit.min.js?ver=150208"></script>
+        <!--  UIKit 上传组件  -- >     
+        <script src="/Public/plugins/uikit-2.16.2/js/components/upload.min.js?ver=150208"></script> -->
+        <script src="/Public/plugins/uikit-2.16.2/js/components/pagination.min.js?ver=150208"></script>
+        <!--  HTML编辑器依赖组件  -- >
+        <link href="/Public/plugins/uikit-2.16.2/css/components/htmleditor.almost-flat.min.css?ver=150208" rel="stylesheet">  
+        <link href="/Public/plugins/codemirror-4.10/codemirror.css?ver=150208" rel="stylesheet">
+        <link href="/Public/plugins/codemirror-4.10/show-hint.css?ver=150208" rel="stylesheet">
+        <link href="/Public/plugins/highlight/styles/railscasts.css?ver=150208" rel="stylesheet">        
+        <script src="/Public/plugins/uikit-2.16.2/js/components/htmleditor.min.js?ver=150208"></script>           
+        <script src="/Public/plugins/highlight/highlight.pack.js?ver=150208"></script>
+        <script src="/Public/plugins/codemirror-4.10/codemirror.js?ver=150208"></script>
+        <script src="/Public/plugins/codemirror-4.10/mode/markdown/markdown.js?ver=150208"></script>
+        <script src="/Public/plugins/codemirror-4.10/addon/mode/overlay.js?ver=150208"></script>
+        <script src="/Public/plugins/codemirror-4.10/mode/xml/xml.js?ver=150208"></script>
+        <script src="/Public/plugins/codemirror-4.10/mode/gfm/gfm.js?ver=150208"></script>        
+        <script src="/Public/js/marked.js?ver=150208"></script> -->
+
+        <!--  自定义样式和脚本  -->     
+        <link href="style.css?ver=150208" rel="stylesheet">        
+        <script src="script.js?ver=150208"></script>
+    </head>
+
+    <body class="cms">
+        <div class="cms-left">
+            <div class="user">
+                <div class="avatar"><img src="osang.jpg"></div>
+                <div class="account">
+                    <strong>Joy Kuang</strong>
+                    <p>q-cute@163.com</p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <ul class="sidebar">
+                <li class="sidebar-item">
+                    <div class="sidebar-item-link">
+                        <a class="link-title uk-icon uk-icon-dashboard">导航表</a>
+                        <ul class="sub-menu">
+                            <span class="sub-menu-title">导航表</span>
+                            <li class="menu-item">
+                                <a class="item-link">后台首页</a>
+                            </li>
+                            <li class="menu-item">
+                                <a class="item-link">网站统计</a>
+                            </li>  
+                            <li class="menu-item">
+                                <a class="item-link">服务支持</a>
+                            </li>                              
+                        </ul>
+                    </div>
+                </li>
+                
+                <li class="sidebar-item active">
+                    <div class="sidebar-item-link">
+                        <a class="link-title uk-icon uk-icon-file-text">产品</a>
+                        <ul class="sub-menu">
+                            <span class="sub-menu-title">产品</span>
+                            <li class="menu-item active">
+                                <a class="item-link">所有产品</a>
+                            </li>                           
+                            <li class="menu-item">
+                                <a class="item-link">添加产品</a>
+                            </li>                         
+                            <li class="menu-item">
+                                <a class="item-link">产品回收</a>
+                            </li>                               
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="sidebar-item">
+                    <div class="sidebar-item-link">
+                        <a class="link-title uk-icon uk-icon-folder-open">分类</a>
+                        <ul class="sub-menu">
+                            <span class="sub-menu-title">分类</span>
+                            <li class="menu-item">
+                                <a class="item-link">全部分类</a>
+                            </li>
+                            <li class="menu-item">
+                                <a class="item-link">添加类别</a>
+                            </li>  
+                            <li class="menu-item">
+                                <a class="item-link">添加品牌</a>
+                            </li>                             
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="sidebar-item">
+                    <div class="sidebar-item-link">
+                        <a class="link-title uk-icon uk-icon-file">页面</a>
+                        <ul class="sub-menu">
+                            <span class="sub-menu-title">页面</span>
+                            <li class="menu-item">
+                                <a class="item-link">所有页面</a>
+                            </li>
+                            <li class="menu-item">
+                                <a class="item-link">新建页面</a>
+                            </li>                       
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="sidebar-item">
+                    <div class="sidebar-item-link">
+                        <a class="link-title uk-icon uk-icon-image">图库</a>
+                        <ul class="sub-menu">
+                            <span class="sub-menu-title">图库</span>
+                            <li class="menu-item">
+                                <a class="item-link">图库管理</a>
+                            </li>
+                            <li class="menu-item">
+                                <a class="item-link">上传图库</a>
+                            </li>                           
+                        </ul>
+                    </div>
+                </li>   
+
+                <li class="sidebar-item">
+                    <div class="sidebar-item-link">
+                        <a class="link-title uk-icon uk-icon-user">用户</a>
+                        <ul class="sub-menu">
+                            <span class="sub-menu-title">用户</span>
+                            <li class="menu-item">
+                                <a class="item-link">我的账户</a>
+                            </li>
+                            <li class="menu-item">
+                                <a class="item-link">所有用户</a>
+                            </li>
+                            <li class="menu-item">
+                                <a class="item-link">创建用户</a>
+                            </li>                               
+                        </ul>
+                    </div>
+                </li>      
+
+                <li class="sidebar-item">
+                    <div class="sidebar-item-link">
+                        <a class="link-title uk-icon uk-icon-cog">设置</a>
+                        <ul class="sub-menu">
+                            <span class="sub-menu-title">设置</span>
+                            <li class="menu-item">
+                                <a class="item-link">首页设置</a>
+                            </li>
+                            <li class="menu-item">
+                                <a class="item-link">分类设置</a>
+                            </li>
+                            <li class="menu-item">
+                                <a class="item-link">网站设置</a>
+                            </li>                            
+                            <li class="menu-item">
+                                <a class="item-link">系统设置</a>
+                            </li>                                
+                        </ul>
+                    </div>
+                </li>                
+
+                
+                <li class="sidebar-item">
+                    <div class="sidebar-item-link">
+                        <a class="link-title uk-icon uk-icon-info-circle tz">关于</a>
+                    </div>
+                </li> 
+ 
+            </ul>
+        </div>
+
+        <div class="cms-right">
+            <div class="cms-nav">
+                <ul class="cms-nav-wrap">
+                    <li class="cms-nav-item">
+                        <a class="uk-icon item-title uk-icon-wordpress "></a>
+                        <ul class="sub-menu">
+                            <li class="menu-item"><a class="item-link">查看网站</a></li>
+                            <li class="menu-item"><a class="item-link">网站统计</a></li>
+                            
+                            <li class="menu-item" style="margin-top: 8px;"><a class="item-link">咨询帮助</a></li>
+                            <li class="menu-item"><a class="item-link">软件支持</a></li>
+                            <li class="menu-item"><a class="item-link">关于悦软</a></li>
+                            <div class="clearfix"></div>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </li>
+                    <li class="cms-nav-item">
+                        <a class="uk-icon item-title uk-icon-plus-circle"></a>
+                        <ul class="sub-menu">
+                            <li class="menu-item"><a class="item-link">添加产品</a></li>
+                            <li class="menu-item"><a class="item-link">新增类型</a></li>
+                            <li class="menu-item"><a class="item-link">新增品牌</a></li>                            
+                            <li class="menu-item"><a class="item-link">上传图片</a></li>
+                            <li class="menu-item"><a class="item-link">创建用户</a></li>
+                            <div class="clearfix"></div>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </li>                 
+                    <li class="cms-nav-item">
+                        <a class="uk-icon item-title uk-icon-user"></a>
+                        <ul class="sub-menu">
+                            <li class="menu-item"><a class="item-link">账号设置</a></li>                      
+                            <li class="menu-item"><a class="item-link">个人信息</a></li>
+                            <li class="menu-item"><a class="item-link">更换头像</a></li>
+                            <li class="menu-item"><a class="item-link">更改密码</a></li>
+                            <div class="clearfix"></div>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </li>
+                    <li class="cms-nav-item">
+                        <a class="uk-icon item-title uk-icon-sign-out" title="注销用户，安全退出系统。"></a>
+                    </li>          
+
+                    <li class="cms-nav-item uk-float-right">
+                        <a class="uk-icon item-title uk-icon-cog"></a>
+                        <ul class="sub-menu">
+                            <li class="menu-item"><a class="item-link">网站设置</a></li>                      
+                            <li class="menu-item"><a class="item-link">内容设置</a></li>
+                            <li class="menu-item"><a class="item-link">数据导入</a></li>
+                            <li class="menu-item"><a class="item-link">数据导出</a></li>
+                            <li class="menu-item"><a class="item-link">高级设置</a></li>
+                            <div class="clearfix"></div>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </li> 
+
+                    <li class="cms-nav-item uk-float-right">
+                        <a class="uk-icon item-title uk-icon-search" title="点击搜索。"></a>
+                    </li>                      
+                    
+                    <div class="clearfix"></div>                    
+                </ul>
+            </div>
+            <div class="cms-nav-bottom">
+                <ul class="uk-breadcrumb where-am-i">
+                    <li><a href="#">后台主页</a></li>
+                    <li><a href="#">产品</a></li>
+                    <li class="uk-active"><span>所有产品</span></li>
+
+                </ul>
+            </div>
+            
+            <div class="cms-content">
+                <div class="cms-content-wrap">
+                    <ul class="uk-tab" data-uk-tab="{connect:'#content-items'}">
+                        <li><a href="#">所有产品</a></li>
+                        <li><a href="#">添加产品</a></li>
+                    </ul>
+                    <ul id="content-items" class="uk-switcher uk-margin">
+                        <li>
+                            <table class="uk-table uk-table-striped uk-table-hover">
+                                <thead>
+                                    <tr>
+                                        <th><input type="checkbox" id="selectAll"></th>
+                                        <th>产品名称</th>
+                                        <th>分类</th>
+                                        <th>品牌</th>
+                                        <th>标签</th>
+                                        <th>来源</th>
+                                        <th>日期</th>
+                                        <th>状态</th>
+                                        <th>操作</th>  
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><input type="checkbox" name="articleID[]"><input type="hidden" name="{$article.id}"></td>
+                                        <td>尿素</td>
+                                        <td>增长肥料</td>
+                                        <td>斯特威斯</td>
+                                        <td>化肥, 增肥</td>         
+                                        <td>官方</td>
+                                        <td>今天 17时40分</td>
+                                        <td><a href="#" title="已审核"><i class="uk-icon-circle uk-text-success"></i></a></td>>
+                                        <td><i class="uk-icon uk-icon-cog uk-text-success"></i></td>                                            
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td><input type="checkbox" name="articleID[]"><input type="hidden" name="{$article.id}"></td>
+                                        <td>尿素</td>
+                                        <td>增长肥料</td>
+                                        <td>斯特威斯</td>
+                                        <td>化肥, 增肥</td>         
+                                        <td>官方</td>
+                                        <td>今天 17时40分</td>
+                                        <td><a href="#" title="已审核"><i class="uk-icon-circle uk-text-success"></i></a></td>>
+                                        <td><i class="uk-icon uk-icon-cog uk-text-success"></i></td>                                            
+                                    </tr>
+
+                                    <tr>
+                                        <td><input type="checkbox" name="articleID[]"><input type="hidden" name="{$article.id}"></td>
+                                        <td>尿素</td>
+                                        <td>增长肥料</td>
+                                        <td>斯特威斯</td>
+                                        <td>化肥, 增肥</td>         
+                                        <td>官方</td>
+                                        <td>今天 17时40分</td>
+                                        <td><a href="#" title="已审核"><i class="uk-icon-circle uk-text-success"></i></a></td>>
+                                        <td><i class="uk-icon uk-icon-cog uk-text-success"></i></td>                                            
+                                    </tr>
+
+                                    <tr>
+                                        <td><input type="checkbox" name="articleID[]"><input type="hidden" name="{$article.id}"></td>
+                                        <td>尿素</td>
+                                        <td>增长肥料</td>
+                                        <td>斯特威斯</td>
+                                        <td>化肥, 增肥</td>         
+                                        <td>官方</td>
+                                        <td>今天 17时40分</td>
+                                        <td><a href="#" title="已审核"><i class="uk-icon-circle uk-text-success"></i></a></td>>
+                                        <td><i class="uk-icon uk-icon-cog uk-text-success"></i></td>                                            
+                                    </tr>
+
+                                    <tr>
+                                        <td><input type="checkbox" name="articleID[]"><input type="hidden" name="{$article.id}"></td>
+                                        <td>尿素</td>
+                                        <td>增长肥料</td>
+                                        <td>斯特威斯</td>
+                                        <td>化肥, 增肥</td>         
+                                        <td>官方</td>
+                                        <td>今天 17时40分</td>
+                                        <td><a href="#" title="已审核"><i class="uk-icon-circle uk-text-success"></i></a></td>>
+                                        <td><i class="uk-icon uk-icon-cog uk-text-success"></i></td>                                            
+                                    </tr>
+
+                                    <tr>
+                                        <td><input type="checkbox" name="articleID[]"><input type="hidden" name="{$article.id}"></td>
+                                        <td>尿素</td>
+                                        <td>增长肥料</td>
+                                        <td>斯特威斯</td>
+                                        <td>化肥, 增肥</td>         
+                                        <td>官方</td>
+                                        <td>今天 17时40分</td>
+                                        <td><a href="#" title="已审核"><i class="uk-icon-circle uk-text-success"></i></a></td>>
+                                        <td><i class="uk-icon uk-icon-cog uk-text-success"></i></td>                                            
+                                    </tr>
+
+                                    <tr>
+                                        <td><input type="checkbox" name="articleID[]"><input type="hidden" name="{$article.id}"></td>
+                                        <td>尿素</td>
+                                        <td>增长肥料</td>
+                                        <td>斯特威斯</td>
+                                        <td>化肥, 增肥</td>         
+                                        <td>官方</td>
+                                        <td>今天 17时40分</td>
+                                        <td><a href="#" title="已审核"><i class="uk-icon-circle uk-text-success"></i></a></td>>
+                                        <td><i class="uk-icon uk-icon-cog uk-text-success"></i></td>                                            
+                                    </tr>
+
+                                    <tr>
+                                        <td><input type="checkbox" name="articleID[]"><input type="hidden" name="{$article.id}"></td>
+                                        <td>尿素</td>
+                                        <td>增长肥料</td>
+                                        <td>斯特威斯</td>
+                                        <td>化肥, 增肥</td>         
+                                        <td>官方</td>
+                                        <td>今天 17时40分</td>
+                                        <td><a href="#" title="已审核"><i class="uk-icon-circle uk-text-success"></i></a></td>>
+                                        <td><i class="uk-icon uk-icon-cog uk-text-success"></i></td>                                            
+                                    </tr>
+
+                                    <tr>
+                                        <td><input type="checkbox" name="articleID[]"><input type="hidden" name="{$article.id}"></td>
+                                        <td>尿素</td>
+                                        <td>增长肥料</td>
+                                        <td>斯特威斯</td>
+                                        <td>化肥, 增肥</td>         
+                                        <td>官方</td>
+                                        <td>今天 17时40分</td>
+                                        <td><a href="#" title="已审核"><i class="uk-icon-circle uk-text-success"></i></a></td>>
+                                        <td><i class="uk-icon uk-icon-cog uk-text-success"></i></td>                                            
+                                    </tr>
+
+                                    <tr>
+                                        <td><input type="checkbox" name="articleID[]"><input type="hidden" name="{$article.id}"></td>
+                                        <td>尿素</td>
+                                        <td>增长肥料</td>
+                                        <td>斯特威斯</td>
+                                        <td>化肥, 增肥</td>         
+                                        <td>官方</td>
+                                        <td>今天 17时40分</td>
+                                        <td><a href="#" title="已审核"><i class="uk-icon-circle uk-text-success"></i></a></td>>
+                                        <td><i class="uk-icon uk-icon-cog uk-text-success"></i></td>                                            
+                                    </tr>
+
+                                    <tr>
+                                        <td><input type="checkbox" name="articleID[]"><input type="hidden" name="{$article.id}"></td>
+                                        <td>尿素</td>
+                                        <td>增长肥料</td>
+                                        <td>斯特威斯</td>
+                                        <td>化肥, 增肥</td>         
+                                        <td>官方</td>
+                                        <td>今天 17时40分</td>
+                                        <td><a href="#" title="已审核"><i class="uk-icon-circle uk-text-success"></i></a></td>>
+                                        <td><i class="uk-icon uk-icon-cog uk-text-success"></i></td>                                            
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td><input type="checkbox" name="articleID[]"><input type="hidden" name="{$article.id}"></td>
+                                        <td>尿素</td>
+                                        <td>增长肥料</td>
+                                        <td>斯特威斯</td>
+                                        <td>化肥, 增肥</td>         
+                                        <td>官方</td>
+                                        <td>今天 17时40分</td>
+                                        <td><a href="#" title="已审核"><i class="uk-icon-circle uk-text-success"></i></a></td>>
+                                        <td><i class="uk-icon uk-icon-cog uk-text-success"></i></td>                                            
+                                    </tr>
+                                                                    
+                                </tbody>
+                            </table>
+
+                            <ul class="uk-pagination uk-pagination-left" data-uk-pagination="{items:24, itemsOnPage:15, currentPage:2}">
+                            <li><a href="#"><i class="uk-icon-angle-double-left"></i></a></li>
+                            <li><a href="#"><i class="uk-icon-angle-double-right"></i></a></li>
+                            </ul>
+                        </li>
+                        <li>22</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

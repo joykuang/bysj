@@ -1,0 +1,189 @@
+ <!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Here is a stduo provide you lots of creative ideas on front-end.">
+    <meta name="keywords" content="Creativities, Creative Ideas, Yueruan, Yueruan Studio, Web Programming, Front-End Design">
+    <meta name="author" content="Joy, Joy Kuang, Yueruan, Yueruan Studio, Web Programming, Front-End Design">
+    <title>悦软工作室 Make creative ideas into reality!</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{$fa_css}" type="text/css"/>    
+    <link rel="stylesheet" href="/Public/css/_Yueruan.css" type="text/css"/>    
+
+    <!--[if lt IE 9]><script src="{$js_url}/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="{$js_url}/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons 
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="icon" href="/favicon.ico">
+    -->
+    
+    
+    </head>
+    <body>
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12"><!--
+                    <h1>Table `user_account`</h1>
+                    <table class="table table-striped">
+                        
+                        <tr><volist name="user_data_item" id="user_data_item">
+                        <td>{$key}</td>
+                        </volist></tr>
+                        
+                        <volist name="user_data" id="user_data">
+                        <tr>
+                            <td>{$user_data.id}</td>
+                            <td>{$user_data.account}</td>
+                            <td>{$user_data.passwd}</td>
+                            <td>{$user_data.belong}</td>
+                            <td>{$user_data.register_time}</td>
+                            <td>{$user_data.last_login_time}</td>
+                            <td>{$user_data.last_login_ip}</td>
+                            <td>{$user_data.detail}</td>
+                            <td>{$user_data.astatus}</td>
+                            <td>{$user_data.verify|default="Verofy Code Here"|md5}</td>
+                        </tr>
+                        </volist>
+                    </table>
+                    
+                    <hr class="divider"> -->
+                    <h1>Data Management</h1>
+                    <table class="table table-striped" id="user_data">
+                        
+                        <tr><td>#</td><td>登陆账号</td><td>用户群组</td><td>注册时间</td><td>状态</td><td>操作</td></tr>
+                        
+                        <volist name="user_data2" id="user_data2">
+                        <tr>
+                            <td>{$user_data2.id}</td>
+                            <td>{$user_data2.account}</td>
+                            <td>{$user_data2.belong}</td>
+                            <td>{$user_data2.register_time}</td>
+                            <td>{$user_data2.astatus}</td>
+                            <td>
+                                <a href="#" class="btn btn-default btn-xs"><i class="fa fa-lock"></i> 更改密码</a>
+                                <span class="btn btn-primary btn-xs user_info"  data-toggle="modal" data-target="#diagbox" rel="{$user_data2.id}"><i class="fa fa-info"></i> 查看资料</span>
+                                <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> 删除用户</a>
+                                <a href="#" class="btn btn-success btn-xs"><i class="fa fa-ban"></i> 账号冻结</a>
+                            </td>
+                        </tr>
+                        </volist>
+                    </table>                    
+                </div>                              
+            </div>          
+        </div>
+        
+        
+      <!-- Bootstrap core JavaScript -->
+      <!-- Placed at the end of the document so the pages load faster -->
+      <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+      <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+      <script src="{$js_url}/ie10-viewport-bug-workaround.js"></script>
+      <script>
+      $(function(){
+        $('#user_data span.user_info').click(function(){
+            $('.modal-body-frame').show();
+            $('.modal-body-inner').hide();
+          
+            var uid = $(this).attr('rel');
+          console.log('Now ID='+uid);
+            var skey = '{$skey}';
+            var data = $.ajax({
+              url: '/Home/User/userapi/uid/'+ uid +'/skey/' +skey,
+              dataType: 'json',
+              complete:function(data){
+			if (data.responeJSON = 'object') {
+				var databox= $('#diagbox');
+					databox.find('.realname').html(data.responseJSON['realname']);
+					databox.find('.account').html(data.responseJSON['email']+'&nbsp;('+data.responseJSON['account']+')');
+					databox.find('.groupname').html(data.responseJSON['groups']);
+					databox.find('.sex').html(data.responseJSON['sex']);
+					databox.find('.birth').html(data.responseJSON['birth']);
+					databox.find('.area').html(data.responseJSON['area']);
+					databox.find('.icon').html(data.responseJSON['icon']);
+					databox.find('.email').html('<a href="mailto:'+data.responseJSON['email']+'">'+data.responseJSON['email']+'</a>');
+					databox.find('.qq').html(data.responseJSON['qq']);
+					databox.find('.weibo').html('<a href="http://weibo.com/n/'+data.responseJSON['weibo']+'" target="_blank">'+data.responseJSON['weibo']+'</a>');
+					databox.find('.tel').html(data.responseJSON['tel']);
+                    databox.find('.modal-title b').html('User Information of ' +data.responseJSON['realname']);
+				} else {
+					var get_info_error = true;
+					var get_error_text = data.responeText;
+				} 
+                
+                $('.modal-body-frame').hide();
+                $('.modal-body-inner').show();
+              }
+            
+            });
+
+          });
+      });
+      </script>      
+      
+      
+      <div class="modal fade" id="diagbox" tabindex="-1" role="dialog" aria-labelledby="diagbox-title" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="diagbox-title"><b>User Personal Information in Detail</b></h4>
+      </div>
+      <div class="modal-body">
+        <div class="modal-body-frame row"><p><i class="fa fa-spinner fa-spin"></i>&nbsp;&nbsp;加载中...</p></div>
+        <div class="modal-body-inner">
+                    <div class="user_box row bg-gray-lighter">
+                        <span class="icon bg-gray"> &nbsp;</span>
+                      <p class="realname">Joy Kuang <span class="btn btn-md btn-danger sex">♂</span></p>
+                        <p class="account">(q-cute@163.com)</p>
+                        <p class="groupname text-danger">Super Administrator</p>
+                    </div>
+                  
+                    <div class="user_box user_items row">
+                      <span class="col-md-2">生日：</span>
+                      <span class="col-md-4 birth">2014年11月5日</span>
+                      <span class="col-md-2">地区：</span>
+                      <span class="col-md-4 area">广东江门</span>
+
+                      <span class="col-md-2">扣扣：</span>
+                      <span class="col-md-4 qq">243113823</span>
+                      <span class="col-md-2">微博：</span>
+                      <span class="col-md-4 weibo">@邝国荣君</span>
+                      
+                      <span class="col-md-2">邮箱：</span>
+                      <span class="col-md-4 email">q-cute@163.com</span>
+                      <span class="col-md-2">电话：</span>
+                      <span class="col-md-4 tel">(+86) 13424919448</span>
+                      
+                      <span class="col-md-2">博客：</span>
+                      <span class="col-md-10 blog">http://weibo.com/joykuang</span>                       
+                                            
+                    </div>
+                  
+                    <div class="user_box user_intro row bg-gray-lightest">
+                      <span class="col-md-12"><b>个人简介：</b></span>   
+                      <span class="col-md-12"><p class="intro">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibhNullam id dolor id nibh ultricies vehicula ut id elit.Duis mollis, est non commodo luctus, nisi erat porttitor ligula.Maecenas sed diam eget risus varius blandit sit amet non magna.Etiam porta sem malesuada magna mollis euismod.Donec ullamcorper nulla non metus auctor fringilla.Fusce dapibus, tellus ac cursus commodo, tortor mauris nibhNullam id dolor id nibh ultricies vehicula ut id elit.Duis mollis, est non commodo luctus, nisi erat porttitor ligula.Maecenas sed diam eget risus varius blandit sit amet non magna.Etiam porta sem malesuada magna mollis euismod.Donec ullamcorper nulla non metus auctor fringilla.</p></span>                           
+                    </div>
+      </div></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default">编辑</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal">关闭</button>
+      </div>
+    </div>
+  </div>
+</div>
+    </body>
+</html>

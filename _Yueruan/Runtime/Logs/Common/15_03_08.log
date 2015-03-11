@@ -1,0 +1,42 @@
+[ 2015-03-08T17:33:16+08:00 ] 192.168.1.111 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000225s ]
+ERR: 无法加载模块:Favicon
+
+[ 2015-03-08T17:34:27+08:00 ] 192.168.1.111 /phpinfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000057s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000269s ]
+ERR: 无法加载模块:Phpinfo
+
+[ 2015-03-08T17:41:50+08:00 ] 127.0.0.1 /ifr_status/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000199s ]
+ERR: 无法加载模块:Ifr_status
+
+[ 2015-03-08T18:11:50+08:00 ] 127.0.0.1 /ifr_status/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000162s ]
+ERR: 无法加载模块:Ifr_status
+
+[ 2015-03-08T18:41:50+08:00 ] 127.0.0.1 /ifr_status/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000206s ]
+ERR: 无法加载模块:Ifr_status
+
+[ 2015-03-08T18:52:39+08:00 ] 111.123.180.44 /80
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000168s ]
+ERR: 无法加载模块:80
+
+[ 2015-03-08T18:52:39+08:00 ] 111.123.180.44 /80
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000133s ]
+ERR: 无法加载模块:80
+

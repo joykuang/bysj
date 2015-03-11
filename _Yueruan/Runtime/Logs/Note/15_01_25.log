@@ -1,0 +1,188 @@
+[ 2015-01-25T01:39:46+08:00 ]  
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000131s ]
+NOTIC: [8] Undefined index: REQUEST_METHOD D:\WWW\_Core\Library\Think\App.class.php 第 31 行.
+NOTIC: [8] Undefined index: REQUEST_URI D:\WWW\_Core\Library\Think\Dispatcher.class.php 第 137 行.
+NOTIC: [8] Use of undefined constant _PHP_FILE_ - assumed '_PHP_FILE_' D:\WWW\_Core\Library\Think\Dispatcher.class.php 第 189 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001355s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001502s ]
+ERR: 无法加载控制器:Home
+
+[ 2015-01-25T01:39:59+08:00 ]  
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000132s ]
+NOTIC: [8] Undefined index: REQUEST_METHOD D:\WWW\_Core\Library\Think\App.class.php 第 31 行.
+NOTIC: [8] Undefined index: REQUEST_URI D:\WWW\_Core\Library\Think\Dispatcher.class.php 第 137 行.
+NOTIC: [8] Use of undefined constant _PHP_FILE_ - assumed '_PHP_FILE_' D:\WWW\_Core\Library\Think\Dispatcher.class.php 第 189 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001339s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001473s ]
+SQL: PRAGMA table_info( notes ) [ RunTime:0.0280s ]
+NOTIC: [8] Undefined index: default D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 60 行.
+NOTIC: [8] Undefined index: extra D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 62 行.
+NOTIC: [8] Undefined index: default D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 60 行.
+NOTIC: [8] Undefined index: extra D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 62 行.
+NOTIC: [8] Undefined index: default D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 60 行.
+NOTIC: [8] Undefined index: extra D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 62 行.
+NOTIC: [8] Undefined index: default D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 60 行.
+NOTIC: [8] Undefined index: extra D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 62 行.
+NOTIC: [8] Undefined index: default D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 60 行.
+NOTIC: [8] Undefined index: extra D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 62 行.
+NOTIC: [8] Undefined index: default D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 60 行.
+NOTIC: [8] Undefined index: extra D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 62 行.
+NOTIC: [8] Undefined index: default D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 60 行.
+NOTIC: [8] Undefined index: extra D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 62 行.
+NOTIC: [8] Undefined index: default D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 60 行.
+NOTIC: [8] Undefined index: extra D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 62 行.
+NOTIC: [8] Undefined index: default D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 60 行.
+NOTIC: [8] Undefined index: extra D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 62 行.
+NOTIC: [8] Undefined index: default D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 60 行.
+NOTIC: [8] Undefined index: extra D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 62 行.
+NOTIC: [8] Undefined index: default D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 60 行.
+NOTIC: [8] Undefined index: extra D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 62 行.
+NOTIC: [8] Undefined index: default D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 60 行.
+NOTIC: [8] Undefined index: extra D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 62 行.
+NOTIC: [8] Undefined index: default D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 60 行.
+NOTIC: [8] Undefined index: extra D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 62 行.
+NOTIC: [8] Undefined index: default D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 60 行.
+NOTIC: [8] Undefined index: extra D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 62 行.
+SQL: SELECT * FROM notes LIMIT 10   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001249s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001418s ]
+
+[ 2015-01-25T01:40:47+08:00 ]  
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000129s ]
+NOTIC: [8] Undefined index: REQUEST_METHOD D:\WWW\_Core\Library\Think\App.class.php 第 31 行.
+NOTIC: [8] Undefined index: REQUEST_URI D:\WWW\_Core\Library\Think\Dispatcher.class.php 第 137 行.
+NOTIC: [8] Use of undefined constant _PHP_FILE_ - assumed '_PHP_FILE_' D:\WWW\_Core\Library\Think\Dispatcher.class.php 第 189 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000952s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001057s ]
+SQL: PRAGMA table_info( notes ) [ RunTime:0.0011s ]
+NOTIC: [8] Undefined index: default D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 60 行.
+NOTIC: [8] Undefined index: extra D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 62 行.
+NOTIC: [8] Undefined index: default D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 60 行.
+NOTIC: [8] Undefined index: extra D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 62 行.
+NOTIC: [8] Undefined index: default D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 60 行.
+NOTIC: [8] Undefined index: extra D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 62 行.
+NOTIC: [8] Undefined index: default D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 60 行.
+NOTIC: [8] Undefined index: extra D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 62 行.
+NOTIC: [8] Undefined index: default D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 60 行.
+NOTIC: [8] Undefined index: extra D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 62 行.
+NOTIC: [8] Undefined index: default D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 60 行.
+NOTIC: [8] Undefined index: extra D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 62 行.
+NOTIC: [8] Undefined index: default D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 60 行.
+NOTIC: [8] Undefined index: extra D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 62 行.
+NOTIC: [8] Undefined index: default D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 60 行.
+NOTIC: [8] Undefined index: extra D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 62 行.
+NOTIC: [8] Undefined index: default D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 60 行.
+NOTIC: [8] Undefined index: extra D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 62 行.
+NOTIC: [8] Undefined index: default D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 60 行.
+NOTIC: [8] Undefined index: extra D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 62 行.
+NOTIC: [8] Undefined index: default D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 60 行.
+NOTIC: [8] Undefined index: extra D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 62 行.
+NOTIC: [8] Undefined index: default D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 60 行.
+NOTIC: [8] Undefined index: extra D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 62 行.
+NOTIC: [8] Undefined index: default D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 60 行.
+NOTIC: [8] Undefined index: extra D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 62 行.
+NOTIC: [8] Undefined index: default D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 60 行.
+NOTIC: [8] Undefined index: extra D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 62 行.
+SQL: SELECT * FROM notes LIMIT 10   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001283s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001442s ]
+
+[ 2015-01-25T14:55:24+08:00 ]  
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000143s ]
+NOTIC: [8] Undefined index: REQUEST_METHOD D:\WWW\_Core\Library\Think\App.class.php 第 31 行.
+NOTIC: [8] Undefined index: REQUEST_URI D:\WWW\_Core\Library\Think\Dispatcher.class.php 第 137 行.
+NOTIC: [8] Use of undefined constant _PHP_FILE_ - assumed '_PHP_FILE_' D:\WWW\_Core\Library\Think\Dispatcher.class.php 第 189 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001813s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002130s ]
+SQL: PRAGMA table_info( notes ) [ RunTime:0.0012s ]
+NOTIC: [8] Undefined index: default D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 60 行.
+NOTIC: [8] Undefined index: extra D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 62 行.
+NOTIC: [8] Undefined index: default D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 60 行.
+NOTIC: [8] Undefined index: extra D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 62 行.
+NOTIC: [8] Undefined index: default D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 60 行.
+NOTIC: [8] Undefined index: extra D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 62 行.
+NOTIC: [8] Undefined index: default D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 60 行.
+NOTIC: [8] Undefined index: extra D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 62 行.
+NOTIC: [8] Undefined index: default D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 60 行.
+NOTIC: [8] Undefined index: extra D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 62 行.
+NOTIC: [8] Undefined index: default D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 60 行.
+NOTIC: [8] Undefined index: extra D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 62 行.
+NOTIC: [8] Undefined index: default D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 60 行.
+NOTIC: [8] Undefined index: extra D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 62 行.
+NOTIC: [8] Undefined index: default D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 60 行.
+NOTIC: [8] Undefined index: extra D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 62 行.
+NOTIC: [8] Undefined index: default D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 60 行.
+NOTIC: [8] Undefined index: extra D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 62 行.
+NOTIC: [8] Undefined index: default D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 60 行.
+NOTIC: [8] Undefined index: extra D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 62 行.
+NOTIC: [8] Undefined index: default D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 60 行.
+NOTIC: [8] Undefined index: extra D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 62 行.
+NOTIC: [8] Undefined index: default D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 60 行.
+NOTIC: [8] Undefined index: extra D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 62 行.
+NOTIC: [8] Undefined index: default D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 60 行.
+NOTIC: [8] Undefined index: extra D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 62 行.
+NOTIC: [8] Undefined index: default D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 60 行.
+NOTIC: [8] Undefined index: extra D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 62 行.
+SQL: SELECT * FROM notes LIMIT 10   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001517s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001693s ]
+
+[ 2015-01-25T14:55:34+08:00 ]  
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000148s ]
+NOTIC: [8] Undefined index: REQUEST_METHOD D:\WWW\_Core\Library\Think\App.class.php 第 31 行.
+NOTIC: [8] Undefined index: REQUEST_URI D:\WWW\_Core\Library\Think\Dispatcher.class.php 第 137 行.
+NOTIC: [8] Use of undefined constant _PHP_FILE_ - assumed '_PHP_FILE_' D:\WWW\_Core\Library\Think\Dispatcher.class.php 第 189 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000889s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000979s ]
+SQL: PRAGMA table_info( notes ) [ RunTime:0.0013s ]
+NOTIC: [8] Undefined index: default D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 60 行.
+NOTIC: [8] Undefined index: extra D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 62 行.
+NOTIC: [8] Undefined index: default D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 60 行.
+NOTIC: [8] Undefined index: extra D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 62 行.
+NOTIC: [8] Undefined index: default D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 60 行.
+NOTIC: [8] Undefined index: extra D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 62 行.
+NOTIC: [8] Undefined index: default D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 60 行.
+NOTIC: [8] Undefined index: extra D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 62 行.
+NOTIC: [8] Undefined index: default D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 60 行.
+NOTIC: [8] Undefined index: extra D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 62 行.
+NOTIC: [8] Undefined index: default D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 60 行.
+NOTIC: [8] Undefined index: extra D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 62 行.
+NOTIC: [8] Undefined index: default D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 60 行.
+NOTIC: [8] Undefined index: extra D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 62 行.
+NOTIC: [8] Undefined index: default D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 60 行.
+NOTIC: [8] Undefined index: extra D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 62 行.
+NOTIC: [8] Undefined index: default D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 60 行.
+NOTIC: [8] Undefined index: extra D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 62 行.
+NOTIC: [8] Undefined index: default D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 60 行.
+NOTIC: [8] Undefined index: extra D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 62 行.
+NOTIC: [8] Undefined index: default D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 60 行.
+NOTIC: [8] Undefined index: extra D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 62 行.
+NOTIC: [8] Undefined index: default D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 60 行.
+NOTIC: [8] Undefined index: extra D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 62 行.
+NOTIC: [8] Undefined index: default D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 60 行.
+NOTIC: [8] Undefined index: extra D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 62 行.
+NOTIC: [8] Undefined index: default D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 60 行.
+NOTIC: [8] Undefined index: extra D:\WWW\_Core\Library\Think\Db\Driver\Sqlite.class.php 第 62 行.
+SQL: SELECT * FROM notes LIMIT 10   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001292s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001460s ]
+

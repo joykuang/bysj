@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>悦软工作室 Make 让想法变成现实</title>
+	    <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <!--link rel="icon" href=" "-->
+		<link rel="stylesheet" href="/Public/plugins/fullpage-2.5.5/jquery.fullPage.css" />
+        <link rel="stylesheet" href="/Public/plugins/uikit-2.16.2/css/uikit.min.css" /><!--
+		<link rel="stylesheet" href="/Public/plugins/uikit-2.16.2/css/components/slideshow.min.css" />
+		<link rel="stylesheet" href="/Public/plugins/uikit-2.16.2/css/components/slidenav.min.css" />
+		<link rel="stylesheet" href="/Public/plugins/uikit-2.16.2/css/components/dotnav.min.css" />
+		-->
+		<link rel="stylesheet" href="/studio/wf.css" />
+        <script src="/Public/plugins/jquery/jquery-1.11.2.min.js"></script>
+        <script src="/Public/plugins/uikit-2.16.2/js/uikit.min.js"></script>
+		<script src="/Public/plugins/fullpage-2.5.5/jquery.fullPage.js"></script><!--
+		<script src="/Public/plugins/uikit-2.16.2/js/components/slideshow.min.js"></script>		
+		-->
+    </head>
+    <body class="studio">
+		<div class="nav">
+			<div class="uk-container uk-container-center">
+				<div class="uk-grid">
+					<div class="uk-width-1-1">
+						<span class="logo" style="display: none;"></span>
+						<a class="nav-link active">首页</a>
+						<a class="nav-link">博客</a>
+						<a class="nav-link">收藏</a>
+						<a class="nav-link">作品</a>
+						<a class="nav-link">图册</a>
+						<a class="nav-link">音乐</a>
+						<a class="nav-link">视频</a>
+						<a class="nav-link">资讯</a>
+						<a class="nav-link">关于</a>				
+						<form class="search">
+							<input name="s" type="text" class="search-text"></input>
+							<a href="javascript:;" class="search-btn">搜索</a> 
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="fullpage">
+			<div class="section section-1">Section One</div>
+			<div class="section section-2">Section Two</div>
+			<div class="section section-3">
+				<div class="slide slide-3-1">Section Three Slide One</div>
+				<div class="slide slide-3-2">Section Three Slide Two</div>
+				<div class="slide slide-3-3">Section Three Slide Three</div>
+				<div class="slide slide-3-4">Section Three Slide Four</div>
+			</div>
+			<div class="section section-4">Section Four</div>
+			<div class="section section-5">Section Five</div>
+			<div class="section section-6">Section Six</div>
+		</div>
+		
+		<script>
+		$(function(){
+			//$('.fullpage').fullpage();
+			$('.fullpage').fullpage({
+
+				menu: true,
+				navigation: true,
+				navigationPosition: 'right',
+				slidesNavigation: true,
+				slidesNavPosition: 'bottom',
+				navigationTooltips: ['晚霞', '天空', '计算机和书籍', '流水', '桌面', '苹果'],
+				css3: true,
+				scrollingSpeed: 700,
+				autoScrolling: true,
+				loopBottom: false,
+				loopTop: false,
+				loopHorizontal: true,
+				continuousVertical: false,
+				animateAnchor: true,
+				controlArrows: true,
+				verticalCentered: true,
+				resize : true,
+			});			
+			
+			/*
+			$('#fullpage').fullpage({
+				//Navigation
+				menu: false,
+				anchors:['firstSlide', 'secondSlide'],
+				navigation: false,
+				navigationPosition: 'right',
+				navigationTooltips: ['firstSlide', 'secondSlide'],
+				slidesNavigation: true,
+				slidesNavPosition: 'bottom',
+			
+				//Scrolling
+				css3: true,
+				scrollingSpeed: 700,
+				autoScrolling: true,
+				scrollBar: false ,
+				easing: 'easeInQuart',
+				easingcss3: 'ease',
+				loopBottom: false,
+				loopTop: false,
+				loopHorizontal: true,
+				continuousVertical: false,
+				normalScrollElements: '#element1, .element2',
+				scrollOverflow: false,
+				touchSensitivity: 15,
+				normalScrollElementTouchThreshold: 5,
+			
+				//Accessibility
+				keyboardScrolling: true,
+				animateAnchor: true,
+				recordHistory: true,
+			
+				//Design
+				controlArrows: true,
+				verticalCentered: true,
+				resize : true,
+				sectionsColor : ['#ccc', '#fff'],
+				paddingTop: '3em',
+				paddingBottom: '10px',
+				fixedElements: '#header, .footer',
+				responsive: 0,
+			
+				//Custom selectors
+				sectionSelector: '.section',
+				slideSelector: '.slide',
+			
+				//events
+				onLeave: function(index, nextIndex, direction){},
+				afterLoad: function(anchorLink, index){},
+				afterRender: function(){},
+				afterResize: function(){},
+				afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
+				onSlideLeave: function(anchorLink, index, slideIndex, direction){}
+			});*/
+		});
+		</script>
+    </body>
+</html>
+
