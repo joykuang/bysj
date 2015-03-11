@@ -64,36 +64,40 @@ a, a:hover, a:active, a:focus, a:link { text-decoration: none; }
 	background-size: cover;
 }
 
-.header {
-	height: 80px;
-	background: url(/lq/img/header-bg.png) no-repeat top center;
+
+/*  工作室网站样式  */
+.studio {
+	position: relative;
 }
 
-.nav   {
-	background-color: #259b24;
-	background: -moz-linear-gradient( top,#259b24,#0a7e07);
-	background: -webkit-linear-gradient( top,#259b24,#0a7e07);
-	background: -o-linear-gradient( top,#259b24,#0a7e07);
-	background: -ms-linear-gradient( top,#259b24,#0a7e07);	
+.studio > .nav   {
+	background-color: rgba(0,0,0,.32);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	display: block;
+	z-index: 999999;
+
 }
  
-.nav > .uk-container > .uk-grid > .uk-width-1-1 > .nav-link {
+.studio > .nav  .nav-link {
 	display: block;
 	float: left;
-	width: 64px;
-	padding: 4px 12px;
-	line-height: 24px;
+	width: 32px;
+	padding: 0 12px;
+	line-height: 34px;
 	text-decoration: none;
 	color: #fff;
 	font-size: 14px;
 	text-align: center;
 }
  
-.nav > .uk-container > .uk-grid > .uk-width-1-1 > .nav-link:hover {
+.studio > .nav .nav-link:hover {
 	background: rgba(255,255,255,.08);
 }
 
-.nav > .uk-container > .uk-grid > .uk-width-1-1 > .search {
+.studio > .nav .search {
 	float: right;
 	display: block;
 	width: 240px;
@@ -101,7 +105,7 @@ a, a:hover, a:active, a:focus, a:link { text-decoration: none; }
 	margin-left: 12px;
 }
 
-.nav > .uk-container > .uk-grid > .uk-width-1-1 > .search > .search-text {
+.studio > .nav .search > .search-text {
 	padding: 0 8px;
 	border: 1px solid #ccc;	
 	margin: 4px auto;
@@ -110,10 +114,12 @@ a, a:hover, a:active, a:focus, a:link { text-decoration: none; }
 	background-color: transparent;
 	border-top-left-radius: 6px;
 	border-bottom-left-radius: 6px;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
 	color: #fff;
 }
 
-.nav > .uk-container > .uk-grid > .uk-width-1-1 > .search > .search-btn {
+.studio > .nav .search > .search-btn {
 	display: block;
 	width: 48px;
 	border: 1px solid #ccc;	
@@ -128,26 +134,54 @@ a, a:hover, a:active, a:focus, a:link { text-decoration: none; }
 	text-align: center;
 }
 
+.section {  color: #fff;  }
 
-.slider  {
-	display: block;
-	width: 100%;
-	overflow: hidden;
+.section-1 {
+	background: url(/studio/img/near-night.jpg) no-repeat top center;
+	background-size: cover;
 }
 
-.footer { 
-	background-color: #0d5302; 
-	padding-top: 18px; 
-	padding-bottom: 18px; 	
-	margin-top: 32px;
+.section-2 {
+	background: url(/studio/img/sky_cloud.jpg) no-repeat top center;
+	background-size: cover;
 }
 
-.footer ul { margin-bottom:12px; }
-.footer ul li { margin:4px 0; list-style: none;color:#fff;font-size: 16px;}
-.footer ul h3 { color: #fff;font-family: "Microsoft JhengHei",sans-serif;}
-.footer ul li a{ font-size: 16px; color: #aaa;}
-.footer ul li a:hover {color: #eee;}
-.copyright { background-color: #000; }
-.copyright p, .copyright a{ font-size: 12px;line-height: 18px;font-family: "Microsoft JhengHei","Microsoft Yahei",sans-serif;}
-.copyright p{ color: #fff; margin-bottom: 0;}
-.copyright a{ color: #ccc; font-weight: bold;}
+.section-3 {
+	background: url(/studio/img/wood-forest.jpg) no-repeat top center;
+	background-size: cover;
+}
+
+.section-3 .slide-3-1 {
+	background: url(/studio/img/books_laptop.jpg) no-repeat top center;
+	background-size: cover;
+}
+
+.section-3 .slide-3-2 {
+	background: url(/studio/img/pen_notepad.jpg) no-repeat top center;
+	background-size: cover;
+}
+
+.section-3 .slide-3-3 {
+	background: url(/studio/img/workstation.jpg) no-repeat top center;
+	background-size: cover;
+}
+
+.section-3 .slide-3-4 {
+	background: url(/studio/img/workspace5.jpg) no-repeat top center;
+	background-size: cover;
+}
+
+.section-4 {
+	background: url(/studio/img/river-forest.jpg) no-repeat top center;
+	background-size: cover;
+}
+
+.section-5 {
+	background: url(/studio/img/workspace5.jpg) no-repeat top center;
+	background-size: cover;
+}
+
+.section-6 {
+	background: url(/studio/img/workstation.jpg) no-repeat top center;
+	background-size: cover;
+}

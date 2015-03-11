@@ -1,1 +1,0 @@
-<?php if (!defined('THINK_PATH')) exit();?>您好，您的资产现金剩余：

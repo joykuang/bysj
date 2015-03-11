@@ -11,20 +11,17 @@ return array(
         //设置之后，除了Home、Admin和User模块之外的模块都不能被直接访问，并且Home模块是默认访问模块（可以不出现在URL地址）
 	
         // 单模块设计，关闭多模块访问
-	//'MULTI_MODULE' => false,
+        //'MULTI_MODULE' => false,
         //'DEFAULT_MODULE' => 'Home',
         //一旦关闭多模块访问后，就只能访问默认模块（这里设置的是Home）。单模块设计后公共模块依然有效
 	
         //数据库的相关配置
-        'APP_DEBUG' => true,
-        'DB_TYPE'   =>'sqlite',
-        //'DB_HOST'   =>'/_Yueruan/Database/YRSS.sdb',
-        'DB_NAME'   =>'D:/WWW/_Yueruan/Database/YRSS.sdb',
-        //'DB_NAME'   =>'sq_joykuang',
-        //'DB_USER'   =>'sq_joykuang',
-        //'DB_PWD'    =>'sq_joykuang',
-        //'DB_PREFIX' =>'studio_',
-		
-		//'DB_TYPE' => 'pdo',
-		//'DB_DSN' => 'sqlite:/_Yueruan/Database/YRSS.sdb'
+        /* 'APP_DEBUG'     =>        true,
+        'DB_TYPE'           =>        'mysql',
+        'DB_HOST'          =>        'localhost',
+        'DB_NAME'         =>        'daocms',
+        'DB_USER'          =>        'root',
+        'DB_PWD'           =>        'joy',
+        'DB_PREFIX'       =>        'cms_',
+        */
 );
