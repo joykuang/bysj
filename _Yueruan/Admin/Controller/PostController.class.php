@@ -7,9 +7,22 @@ class PostController extends Controller {
     }
 
     public function index(){
-        $post_data = M('post');
-        $post_record = $post_data->limit(10)->select();
-        dump($post_record);
+        $post_data = D('Post');
+        //$post_record = $post_data->limit(10)->select(); //输出查询记录集
+        $cc['post_id'] = 1;
+        $cc['post_status'] = 0;
+        $post_record = $post_data->postlist(10,$cc);
+        echo $post_data->getLastSql();
+        $post_ziduan = $post_data->getDbFields();   
+
+        //dump($post_ziduan);
+        //dump($post_record);
+        foreach ($post_record as $k => $v) {
+            echo '<b>第'.$k.'条记录：</b><br>';
+            foreach ($v as $kk => $vv) {
+                echo '<b>'.$kk.':  </b>'.$vv.'<br>';
+            }
+        }
     }
  
     public function newpost(){

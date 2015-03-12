@@ -8,7 +8,7 @@ define('APP_DEBUG',True);
 
 //每个应用都可以在不同的情况下设置自己的状态（或者称之为应用场景），并且加载不同的配置文件。
 //举个例子，你需要在公司和家里分别设置不同的数据库测试环境。那么可以这样处理，在公司环境中就会自动加载该状态对应的配置文件（位于 Application/Common/Conf/office.php ）
-//define('APP_STATUS','office');
+define('APP_STATUS','Office');
 
 
 //设定非允许访问目录的默认文档
