@@ -1,0 +1,187 @@
+ /**********  网页元素  **********/
+img { max-width: 100%; }
+a, a:hover, a:active, a:focus, a:link { text-decoration: none; }
+*, h1, h2, h3, span, p { font-family: "Microsoft Yahei"; }
+
+.clearfix { clear: both; }
+.no-padding, .np {  padding: 0;  }
+
+/**  UIKit 组件改写  **/
+@media (min-width: 1240px) {
+	.uk-container {
+		max-width: 1232px;
+		padding: 0 16px;
+	}
+	
+	.uk-grid:not(.uk-grid-preserve)+.uk-grid {
+		margin-top: 32px;
+	}
+	
+	.uk-grid:not(.uk-grid-preserve) {
+		margin-left: -16px;
+	}	
+	
+	.uk-grid:not(.uk-grid-preserve)> * {
+		padding-left: 16px;
+	}
+	
+	.content .uk-width-5-6 { 
+		padding-left: 0; 
+		height:  240px;
+	}
+	
+	.content .uk-width-1-6 > * { 
+		height:  240px;
+		background-color: #000;
+	}	
+}
+
+.uk-slidenav-previous,
+.uk-slidenav-next,
+.uk-slidenav:active,
+.uk-slidenav:focus, 
+.uk-slidenav:hover {
+	color: #fff;
+}
+.uk-dotnav {
+	position: absolute;
+	left: 36%;
+	bottom: 0;
+	z-index: 99;
+}
+
+.uk-dotnav>li.uk-active>a,
+.uk-dotnav>li>a:focus, 
+.uk-dotnav>li>a:hover {
+	background: #fff;
+}
+
+.uk-dotnav>li>a {
+	background: rgba(255,255,255,.36);
+}
+
+.uk-position-cover {
+	background-size: cover;
+}
+
+
+/*  工作室网站样式  */
+.studio {
+	position: relative;
+}
+
+.studio > .nav   {
+	background-color: rgba(0,0,0,.32);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	display: block;
+	z-index: 999999;
+
+}
+ 
+.studio > .nav  .nav-link {
+	display: block;
+	float: left;
+	width: 32px;
+	padding: 0 12px;
+	line-height: 34px;
+	text-decoration: none;
+	color: #fff;
+	font-size: 14px;
+	text-align: center;
+}
+ 
+.studio > .nav .nav-link:hover {
+	background: rgba(255,255,255,.08);
+}
+
+.studio > .nav .search {
+	float: right;
+	display: block;
+	width: 240px;
+	padding: 0;
+	margin-left: 12px;
+}
+
+.studio > .nav .search > .search-text {
+	padding: 0 8px;
+	border: 1px solid #ccc;	
+	margin: 4px auto;
+	height: 24px;
+	float: left;
+	background-color: transparent;
+	border-top-left-radius: 6px;
+	border-bottom-left-radius: 6px;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	color: #fff;
+}
+
+.studio > .nav .search > .search-btn {
+	display: block;
+	width: 48px;
+	border: 1px solid #ccc;	
+	border-left: 0;	
+	margin: 4px auto;
+	height: 24px;
+	line-height: 24px;	
+	float: left;
+	border-top-right-radius: 6px;
+	border-bottom-right-radius: 6px;
+	color: #fff;
+	text-align: center;
+}
+
+.section {  color: #fff;  }
+
+.section-1 {
+	background: url(/studio/img/near-night.jpg) no-repeat top center;
+	background-size: cover;
+}
+
+.section-2 {
+	background: url(/studio/img/sky_cloud.jpg) no-repeat top center;
+	background-size: cover;
+}
+
+.section-3 {
+	background: url(/studio/img/wood-forest.jpg) no-repeat top center;
+	background-size: cover;
+}
+
+.section-3 .slide-3-1 {
+	background: url(/studio/img/books_laptop.jpg) no-repeat top center;
+	background-size: cover;
+}
+
+.section-3 .slide-3-2 {
+	background: url(/studio/img/pen_notepad.jpg) no-repeat top center;
+	background-size: cover;
+}
+
+.section-3 .slide-3-3 {
+	background: url(/studio/img/workstation.jpg) no-repeat top center;
+	background-size: cover;
+}
+
+.section-3 .slide-3-4 {
+	background: url(/studio/img/workspace5.jpg) no-repeat top center;
+	background-size: cover;
+}
+
+.section-4 {
+	background: url(/studio/img/river-forest.jpg) no-repeat top center;
+	background-size: cover;
+}
+
+.section-5 {
+	background: url(/studio/img/workspace5.jpg) no-repeat top center;
+	background-size: cover;
+}
+
+.section-6 {
+	background: url(/studio/img/workstation.jpg) no-repeat top center;
+	background-size: cover;
+}

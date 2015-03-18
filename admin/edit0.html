@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>编辑</title><!--
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+        <link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon.png">
+        -->
+        <!--  jQuery库  -->      
+        <script src="/Public/plugins/jquery/jquery-1.11.2.min.js?ver=150208"></script>     
+        <!--  UIKit 前端库  -->          
+        <link href="/Public/plugins/uikit-2.16.2/css/uikit.almost-flat.min.css?ver=150208" rel="stylesheet">        
+        <script src="/Public/plugins/uikit-2.16.2/js/uikit.min.js?ver=150208"></script>
+        <!--  UIKit 上传组件  -->     
+        <script src="/Public/plugins/uikit-2.16.2/js/components/upload.js?ver=150208"></script>
+        <!--  HTML编辑器依赖组件  -->
+        <link href="/Public/plugins/uikit-2.16.2/css/components/htmleditor.almost-flat.min.css?ver=150208" rel="stylesheet">  
+        <link href="/Public/plugins/codemirror-4.10/codemirror.css?ver=150208" rel="stylesheet">
+        <link href="/Public/plugins/codemirror-4.10/show-hint.css?ver=150208" rel="stylesheet">
+        <link href="/Public/plugins/highlight/styles/railscasts.css?ver=150208" rel="stylesheet">        
+        <script src="/Public/plugins/uikit-2.16.2/js/components/htmleditor.min.js?ver=150208"></script>           
+        <script src="/Public/plugins/highlight/highlight.pack.js?ver=150208"></script>
+        <script src="/Public/plugins/codemirror-4.10/codemirror.js?ver=150208"></script>
+        <script src="/Public/plugins/codemirror-4.10/mode/markdown/markdown.js?ver=150208"></script>
+        <script src="/Public/plugins/codemirror-4.10/addon/mode/overlay.js?ver=150208"></script>
+        <script src="/Public/plugins/codemirror-4.10/mode/xml/xml.js?ver=150208"></script>
+        <script src="/Public/plugins/codemirror-4.10/mode/gfm/gfm.js?ver=150208"></script>        
+        <script src="/Public/js/marked.js?ver=150208"></script>
+        <!--  自定义样式和脚本  -->     
+        <link href="style.css?ver=150208" rel="stylesheet">        
+        <script src="script.js?ver=150208"></script>
+    </head>
+
+    <body class="cms">
+        <div class="uk-container uk-container-center">
+            <div class="uk-grid">                
+                <div class="uk-width-5-6">
+                    <div style="width: 100%; display: block;">
+                        <form class="uk-form">
+                            <div class="uk-form-row"><input type="text" placeholder="文章标题~~~"></div>
+                            <div class="uk-form-row"><textarea data-uk-htmleditor="{markdown:true, lblPreview: '预览'}"></textarea></div>
+                        </form>
+                    </div>                   
+                </div>   
+                <div class="uk-width-1-6">
+                    <form class="uk-form">
+                        <fieldset>
+                            <legend>发布设置</legend>
+                            <div class="uk-form-row"><input type="text" placeholder="Text input"></div>
+                            <div class="uk-form-row">
+                                <select>
+                                    <option>选择分类？</option>
+                                    <option>文章</option>
+                                    <option>页面</option>
+                                    <option>通知</option>                                    
+                                </select>                            
+                            </div>
+                            <div class="uk-form-row">
+                                <select>
+                                    <option>公开性？</option>
+                                    <option>私有</option>
+                                    <option>公开</option>
+                                    <option>密码访问</option>                                    
+                                </select>                            
+                            </div>                            
+                            <div class="uk-form-row">
+                                <button class="uk-button">立即发布</button>
+                                <button class="uk-button">存为草稿</button>
+                            </div>
+                            <div class="uk-form-row">
+                                <label><input type="checkbox"> Checkbox</label>
+                            </div>                            
+                        </fieldset>
+                    </form>            
+                </div>                
+            </div>
+        </div>
+
+    </body>
+</html>

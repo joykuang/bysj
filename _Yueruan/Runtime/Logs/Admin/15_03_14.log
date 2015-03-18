@@ -1,0 +1,13 @@
+[ 2015-03-14T14:29:30+08:00 ] 127.0.0.1 /Admin/Post/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001019s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.017901s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.018084s ]
+SQL: SHOW COLUMNS FROM `cms_post` [ RunTime:0.0338s ]
+SQL: SELECT * FROM `cms_post` WHERE `post_id` = 1 AND `post_status` = 0 LIMIT 10   [ RunTime:0.0015s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.022126s ]
+INFO: [ app_end ] --END-- [ RunTime:0.022278s ]
+
