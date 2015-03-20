@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>悦软工作室 Make 让想法变成现实</title>
+	    <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/Public/plugins/uikit/css/uikit.min.css" />
+        <script src="/Public/plugins/jquery/jquery-1.11.2.min.js"></script>
+        <script src="/Public/plugins/uikit/js/uikit.min.js"></script>
+        
+        <style>
+        * { padding: 0; margin: 0; border: 0; }
+        a, a:hover, a:active, a:focus, a:link { text-decoration: none; }
+        a { color: #777; }
+        a:hover { color: #333; }
+        </style>
+    </head>
+    <body>
+        <div class="uk-container uk-container-center">
+            <div class="uk-grid">
+                <div class="uk-width-1-1">
+                    <table class="uk-table uk-table-hover uk-table-striped uk-table-condensed data-api"><thead><tr><th>序号</th><th>新闻标题</th><th>发布来源</th><th>发布时间</th></tr></thead><tbody></tbody></table>
+                </div>
+                
+                <div class="uk-width-1-1" style="margin-top: 5em;">
+                    <table class="uk-table uk-table-hover uk-table-striped uk-table-condensed data-json"><thead><tr><th>项目</th><th>数值</th></tr></thead><tbody></tbody></table>
+                    
+                </div>
+            </div>
+        </div>
+
+		<script>
+		$(function(){
+            $.ajax({
+                url: '/Admin/Api/jwc',
+                dataType: 'json',
+                success: function(response, status, jqxhr){
+                    console.log('Status Code: ' + status +'\n');
+                    console.log('jQuery XHR: ' + jqxhr +'\n');
+                    $.each(response, function(key, value){
+                        $('.data-api > tbody').append('<tr><td>'+(key+1)+'</td><td><a href="http://jwc.wyu.cn/www/'+value.url+'" target="_blank">'+value.title+'</td><td>'+value.author+'</td><td>'+value.date+'</td></tr>');
+                    });
+                }
+            });
+		});
+        
+        $.ajax({
+            url: '/Admin/Api/uikit',
+            dateType: 'json', 
+            success: function(data){ 
+                $.each(data.uikit, function(key, value){
+                    if (typeof(value) != 'object') {
+                    $('.data-json > tbody').append('<tr><td>'+key+'</td><td>'+value+'</td></tr>');
+                    } else {
+                        var data =  '<table class="uk-table uk-table-hover uk-table-striped uk-table-condensed data-json"><thead><tr><th>项目</th><th>数值</th></tr></thead><tbody>';
+                        $.each(value, function(key2, value2){
+                            data = data + '<tr><td>'+key2+'</td><td>'+value2+'</td></tr>';
+                        });
+                        data = data + '</tbody></table>';
+                        $('.data-json > tbody').append('<tr><td>'+key+'</td><td>'+data+'</td></tr>');
+                    }
+                });
+                
+                //$('.data').text($.parseJSON(data));
+            }
+        });
+		</script>
+    </body>
+</html>
+

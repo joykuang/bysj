@@ -19,11 +19,14 @@ class PostModel extends Model{
  * 查看文章
  * @author Joy Kuang <q-cute@163.com>
  */
-    public function viewpost($post_id){
-        if ($post_id <= 0) return false;
-        $post_record = $this->limit($recordset_count)->select();
+    public function viewpost(){
+        echo 'Model: Home/Post'; 
+        if (I('id') <= 0) return false;
+        //$condition['post_id'] = $post_id;
+        $post_record = $this->find(I('id'));
         if (sizeof($post_record) > 0) return $post_record;
         else return null;
+        
     }
     
 }

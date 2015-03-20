@@ -8,4 +8,10 @@ landx/
 *.7z
 *.zip
 *.jpg
+*.png
+*.gif
+*.bmp
+*.bat
+*.cmd
 test/
+Experiments/

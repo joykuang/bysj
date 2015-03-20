@@ -19,13 +19,11 @@ class PostModel extends Model{
  * 查看文章
  * @author Joy Kuang <q-cute@163.com>
  */
-    public function viewpost($post_id){
-        if (!is_int($post_id)) return false;
-        if ($post_id <= 0) return false;
-        $condition['post_id'] = $post_id;
-        $post_record = $this->where($condition)->select();
-        if (sizeof($post_record) > 0) return $post_record;
-        else return null;
+    public function postview(){
+        if (preg_match('/^[1-9]\d*$/', I('id')) != 1) return false;
+        $post_record = $this->find(I('id'));
+        if (sizeof($post_record) > 0) return null;
+        else return $post_record;
     }
     
 }
