@@ -2,7 +2,7 @@
 $uikit = array(
     'uikit' => array(
         'version' => '2.18.0',
-        'author' =>'YOOTHEME',
+        'author' =>'uikit',
         'github' => 'https://github.com/uikit/uikit',
         'release' => 'https://github.com/uikit/uikit/releases/download/v2.18.0/uikit-2.18.0.zip',
         'source' => 'https://github.com/uikit/uikit/archive/v2.18.0.zip',
@@ -224,10 +224,21 @@ $uikit = array(
             'utility.min.js' => '/Public/plugins/uikit/js/core/utility.min.js'
         )
     ),
+    
     'swiper' => array(
         'version' => '3.0.4',
         'author' =>'...',
         'something' => '...'
+    ),
+    
+    'less.js' => array(
+        'version' => '2.4.0',
+        'author' => 'less',
+        'github' => 'https://github.com/less/less.js',
+        'source' => 'https://github.com/less/less.js/archive/v2.3.1.zip',
+        'script' => '/Public/plugins/less.js/less.min.js',
+        'uncompress_script' => '/Public/plugins/less.js/less.js',
+        'compress_script' => '/Public/plugins/less.js/less.min.js'
     )
 );
 

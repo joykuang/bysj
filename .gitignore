@@ -15,3 +15,5 @@ landx/
 *.cmd
 test/
 Experiments/
+*.kup
+.git/
