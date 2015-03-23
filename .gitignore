@@ -9,3 +9,6 @@ landx/
 *.zip
 *.jpg
 test/
+.settings/
+.project
+*.kup
