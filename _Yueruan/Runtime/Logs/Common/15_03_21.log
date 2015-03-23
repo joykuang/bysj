@@ -1,0 +1,120 @@
+[ 2015-03-21T17:47:51+08:00 ] 27.45.9.48 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000680s ]
+ERR: 无法加载模块:Favicon
+
+[ 2015-03-21T17:49:09+08:00 ] 192.168.1.111 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000661s ]
+ERR: 无法加载模块:Favicon
+
+[ 2015-03-21T17:50:47+08:00 ] 192.168.1.111 /test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001037s ]
+ERR: 无法加载模块:Test
+
+[ 2015-03-21T17:57:02+08:00 ] 127.0.0.1 /ifr_status/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000821s ]
+ERR: 无法加载模块:Ifr_status
+
+[ 2015-03-21T18:27:02+08:00 ] 127.0.0.1 /ifr_status/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001134s ]
+ERR: 无法加载模块:Ifr_status
+
+[ 2015-03-21T18:57:02+08:00 ] 127.0.0.1 /ifr_status/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000951s ]
+ERR: 无法加载模块:Ifr_status
+
+[ 2015-03-21T21:29:48+08:00 ] 192.168.1.111 /Public/plugins/uikit-2.16.2/js/uikit.min.js?ver=150208
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000056s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001503s ]
+ERR: 无法加载模块:Public
+
+[ 2015-03-21T21:29:48+08:00 ] 192.168.1.111 /Public/plugins/uikit-2.16.2/css/uikit.almost-flat.min.css?ver=150208
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001182s ]
+ERR: 无法加载模块:Public
+
+[ 2015-03-21T21:29:51+08:00 ] 192.168.1.111 /Public/plugins/uikit-2.16.2/css/uikit.almost-flat.min.css?ver=150208
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000056s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001107s ]
+ERR: 无法加载模块:Public
+
+[ 2015-03-21T21:29:51+08:00 ] 192.168.1.111 /Public/plugins/uikit-2.16.2/js/uikit.min.js?ver=150208
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000954s ]
+ERR: 无法加载模块:Public
+
+[ 2015-03-21T21:39:39+08:00 ] 192.168.1.111 /tpl/osang.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001252s ]
+ERR: 无法加载模块:Tpl
+
+[ 2015-03-21T21:39:39+08:00 ] 192.168.1.111 /tpl/style.less?ver=%3Cbr%20/%3E%3Cb%3EWarning%3C/b%3E:%20%20date()%20expects%20at%20least%201%20parameter,%200%20given%20in%20%3Cb%3EF:\XAMPP\htdocs\tpl\index.php%3C/b%3E%20on%20line%20%3Cb%3E8%3C/b%3E%3Cbr%20/%3E
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001157s ]
+ERR: 无法加载模块:Tpl
+
+[ 2015-03-21T21:39:39+08:00 ] 192.168.1.111 /tpl/main.js?ver=%3Cbr%20/%3E%3Cb%3EWarning%3C/b%3E:%20%20date()%20expects%20at%20least%201%20parameter,%200%20given%20in%20%3Cb%3EF:\XAMPP\htdocs\tpl\index.php%3C/b%3E%20on%20line%20%3Cb%3E364%3C/b%3E%3Cbr%20/%3E
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000085s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001351s ]
+ERR: 无法加载模块:Tpl
+
+[ 2015-03-21T21:40:21+08:00 ] 192.168.1.111 /tpl/style.less?ver=%3Cbr%20/%3E%3Cb%3EWarning%3C/b%3E:%20%20date()%20expects%20at%20least%201%20parameter,%200%20given%20in%20%3Cb%3EF:\XAMPP\htdocs\tpl\index.php%3C/b%3E%20on%20line%20%3Cb%3E8%3C/b%3E%3Cbr%20/%3E
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001247s ]
+ERR: 无法加载模块:Tpl
+
+[ 2015-03-21T21:40:21+08:00 ] 192.168.1.111 /tpl/main.js?ver=%3Cbr%20/%3E%3Cb%3EWarning%3C/b%3E:%20%20date()%20expects%20at%20least%201%20parameter,%200%20given%20in%20%3Cb%3EF:\XAMPP\htdocs\tpl\index.php%3C/b%3E%20on%20line%20%3Cb%3E364%3C/b%3E%3Cbr%20/%3E
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001231s ]
+ERR: 无法加载模块:Tpl
+
+[ 2015-03-21T21:40:25+08:00 ] 192.168.1.111 /tpl/style.less?ver=%3Cbr%20/%3E%3Cb%3EWarning%3C/b%3E:%20%20date()%20expects%20at%20least%201%20parameter,%200%20given%20in%20%3Cb%3EF:\XAMPP\htdocs\tpl\index.php%3C/b%3E%20on%20line%20%3Cb%3E8%3C/b%3E%3Cbr%20/%3E
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001150s ]
+ERR: 无法加载模块:Tpl
+
+[ 2015-03-21T21:40:25+08:00 ] 192.168.1.111 /tpl/main.js?ver=%3Cbr%20/%3E%3Cb%3EWarning%3C/b%3E:%20%20date()%20expects%20at%20least%201%20parameter,%200%20given%20in%20%3Cb%3EF:\XAMPP\htdocs\tpl\index.php%3C/b%3E%20on%20line%20%3Cb%3E364%3C/b%3E%3Cbr%20/%3E
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001294s ]
+ERR: 无法加载模块:Tpl
+
+[ 2015-03-21T21:40:29+08:00 ] 192.168.1.111 /tpl/style.less?ver=%3Cbr%20/%3E%3Cb%3EWarning%3C/b%3E:%20%20date()%20expects%20at%20least%201%20parameter,%200%20given%20in%20%3Cb%3EF:\XAMPP\htdocs\tpl\index.php%3C/b%3E%20on%20line%20%3Cb%3E8%3C/b%3E%3Cbr%20/%3E
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000056s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001129s ]
+ERR: 无法加载模块:Tpl
+
+[ 2015-03-21T21:40:29+08:00 ] 192.168.1.111 /tpl/main.js?ver=%3Cbr%20/%3E%3Cb%3EWarning%3C/b%3E:%20%20date()%20expects%20at%20least%201%20parameter,%200%20given%20in%20%3Cb%3EF:\XAMPP\htdocs\tpl\index.php%3C/b%3E%20on%20line%20%3Cb%3E364%3C/b%3E%3Cbr%20/%3E
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000078s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001455s ]
+ERR: 无法加载模块:Tpl
+
+[ 2015-03-21T21:40:37+08:00 ] 192.168.1.111 /tpl/style.less?ver=%3Cbr%20/%3E%3Cb%3EWarning%3C/b%3E:%20%20date()%20expects%20at%20least%201%20parameter,%200%20given%20in%20%3Cb%3EF:\XAMPP\htdocs\tpl\index.php%3C/b%3E%20on%20line%20%3Cb%3E8%3C/b%3E%3Cbr%20/%3E
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001467s ]
+ERR: 无法加载模块:Tpl
+

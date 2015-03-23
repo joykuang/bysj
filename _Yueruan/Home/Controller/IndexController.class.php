@@ -11,24 +11,18 @@ class IndexController extends Controller {
     }
     
     public function post(){
-        $post_id = I('id');
-        if ($post_id <= 0) {
+        $post_data = D('Admin/Post');
+        $post_record = $post_data->postview();
+        if (!$post_record) {
             echo 'URL ERROR!';
+        } elseif ($post_record == null){
+            echo 'No record found!';
         } else {
-            $post_data = D('Admin/Post');
-            $post_record = $post_data->viewpost($post_id);
-            if ($post_record == null) {
-                echo 'No record found!';
-            } else {
-                echo $post_record[0]['post_title'];
-                echo '<hr>';
-                echo $post_record[0]['post_content'];
-            }
-            
+            dump($post_record);
             echo '<hr><b>SQL: </b><b>';
             echo $post_data->getLastSql();
             echo '</b>';
-        }
+        } 
     }
  
      public function page(){

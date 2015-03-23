@@ -1,0 +1,42 @@
+[ 2015-03-22T00:12:36+08:00 ] 192.168.1.111 /tpl/less/reset.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001330s ]
+ERR: 无法加载模块:Tpl
+
+[ 2015-03-22T00:42:07+08:00 ] 192.168.1.111 /Public/plugins/less.js/less.js280a5e
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000848s ]
+ERR: 无法加载模块:Public
+
+[ 2015-03-22T00:42:17+08:00 ] 192.168.1.111 /Public/plugins/less.js/less.jsf5964a
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000060s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002897s ]
+ERR: 无法加载模块:Public
+
+[ 2015-03-22T13:55:33+08:00 ] 192.168.1.111 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001375s ]
+ERR: 无法加载模块:Favicon
+
+[ 2015-03-22T14:08:04+08:00 ] 127.0.0.1 /ifr_status/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000778s ]
+ERR: 无法加载模块:Ifr_status
+
+[ 2015-03-22T14:38:04+08:00 ] 127.0.0.1 /ifr_status/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000824s ]
+ERR: 无法加载模块:Ifr_status
+
+[ 2015-03-22T21:49:37+08:00 ] 192.168.1.111 /Public/plugins/jquery/jquery-1.11.3.min.js?5f770cbd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001211s ]
+ERR: 无法加载模块:Public
+
