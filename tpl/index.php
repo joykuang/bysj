@@ -227,13 +227,101 @@
         
         </div>
         <div class="cms-right">
-            <div class="cms-top"></div>
+            <div class="cms-top">
+                <ul class="cms-nav">
+                    <li>
+                        <a class="cms-icon uk-icon-wordpress"></a>
+                        <ul>
+                            <li><a><i class="cms-icon uk-icon-eye"></i>查看网站</a></li>
+                            <li><a><i class="cms-icon uk-icon-coffee"></i>网站状态</a></li>
+                            <li><a><i class="cms-icon uk-icon-bar-chart"></i>站长统计</a></li>
+                            <li><a><i class="cms-icon uk-icon-cog"></i>系统设置</a></li>
+                            <div class="clearfix"></div>
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <a class="cms-icon uk-icon-plus-circle"></a>
+                        <ul>
+                            <li><a><i class="cms-icon uk-icon-eye"></i>撰写文章</a></li>
+                            <li><a><i class="cms-icon uk-icon-coffee"></i>新建页面</a></li>
+                            <li><a><i class="cms-icon uk-icon-bar-chart"></i>添加分类</a></li>
+                            <li><a><i class="cms-icon uk-icon-cog"></i>上传媒体</a></li>
+                            <li><a><i class="cms-icon uk-icon-cog"></i>新增用户</a></li>
+                            <div class="clearfix"></div>
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <a class="cms-icon uk-icon-comments"></a>
+                        <ul>
+                            <li><a><i class="cms-icon uk-icon-cog"></i>文章评论</a></li>
+                            <li><a><i class="cms-icon uk-icon-cog"></i>站内私信</a></li>
+                            <li><a><i class="cms-icon uk-icon-cog"></i>系统通知</a></li>
+                            <li><a><i class="cms-icon uk-icon-cog"></i>发送消息</a></li>
+                            <div class="clearfix"></div>
+                        </ul>
+                    </li>
+                    
+                    <div class="clearfix"></div>
+                </ul>
+                
+                <ul class="cms-nav uk-float-right">
+                    <li>
+                        <a class="cms-icon uk-icon-info-circle"></a>
+                        <ul>
+                            <li><a>查看网站</a></li>
+                            <li><a>网站状态</a></li>
+                            <li><a>站长统计</a></li>
+                            <li><a>系统设置</a></li>
+                            <div class="clearfix"></div>
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <a class="cms-icon uk-icon-user"></a>
+                        <ul>
+                            <li><a>撰写文章</a></li>
+                            <li><a>新建页面</a></li>
+                            <li><a>添加分类</a></li>
+                            <li><a>上传媒体</a></li>
+                            <li><a>新增用户</a></li>
+                            <div class="clearfix"></div>
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <a class="cms-icon uk-icon-cog"></a>
+                        <ul>
+                            <li><a>文章评论</a></li>
+                            <li><a>站内私信</a></li>
+                            <li><a>系统通知</a></li>
+                            <li><a>发送消息</a></li>
+                            <div class="clearfix"></div>
+                        </ul>
+                    </li>
+                    
+                    <div class="clearfix"></div>
+                </ul>
+            </div>
             <div class="cms-content"></div>
         </div>
-        <!--  jQuery库  -->      
-        <script src="/Public/plugins/jquery/jquery-1.11.2.min.js?<?php ver()?>"></script>  
-        <script src="/Public/plugins/uikit/js/uikit.min.js?<?php ver()?>"></script>
-        <script src="/Public/plugins/uikit/js/components/tooltip.min.js?<?php ver()?>"></script>
-        <script src="main.js?<?php ver()?>"></script>
+        <!--  JS库  -->
+        <script src="/Public/js/require.js?<?php ver()?>"></script> 
+        <script>
+            requirejs.config({
+                baseUrl: '/Public/js',
+                paths: {
+                    jquery: '../plugins/jquery/jquery-1.11.2.min',
+                    uikit: '../plugins/uikit/js/uikit.min',
+                    components: '../plugins/uikit/js/components',
+                    core: '../plugins/uikit/js/core'
+                }
+            });
+            requirejs(['jquery'], function(){
+                requirejs(['uikit', 'components/tooltip.min']);
+                $.getScript('main.js');
+            });
+        </script>
     </body>
 </html>
