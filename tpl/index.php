@@ -10,8 +10,22 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 声明文档使用的字符编码 -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- 为移动设备添加 viewport --><!-- `width=device-width` 会导致 iPhone 5 添加到主屏后以 WebApp 全屏模式打开页面时出现黑边 http://bigc.at/ios-webapp-viewport-meta.orz -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+    <!--"添加到主屏幕"后，全屏显示 -->
+    <meta name="apple-touch-fullscreen" content="yes">
+    <!--IOS私有属性(apple-mobile-web-app-capable),启用 webapp 模式, 会隐藏工具栏和菜单栏，和其它配合使用。-->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!--在webapp模式下，改变顶部状态条的颜色。-->
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <!--忽略将页面中的数字识别为电话号码 -->
+    <meta content="telephone=no" name="format-detection">
+    <!-- iOS 设备 begin -->
+    <meta name="apple-mobile-web-app-title" content="道CMS">
+    <link rel="Shortcut Icon" href=" http://www.letv.com/favicon.ico" />
+    <link rel="apple-touch-icon-precomposed" href="http://i1.letvimg.com/img/201310/09/appLetv.png"/>
         <title>我的网站 &rsaquo;&rsaquo; Dao CMS 内容管理系统 @Powered By 悦软工作室(Yueruan Studio)</title>
         <link href="/Public/plugins/uikit/css/uikit.almost-flat.min.css?<?php ver() ?>" rel="stylesheet">       
         <link href="/Public/plugins/uikit/css/components/tooltip.gradient.min.css?<?php ver() ?>" rel="stylesheet">
@@ -31,7 +45,7 @@
             //rootpath: ":/a.com/"
         };
         </script>
-        <script src="/Public/plugins/less.js/less.js?<?php ver() ?>"></script>
+        <script src="/Public/plugins/less.js/less.min.js?<?php ver() ?>"></script>
         <?php } else { ?>
         <link href="style.css?<?php ver() ?>" rel="stylesheet">   
         <?php } ?>
@@ -228,7 +242,7 @@
         </div>
         <div class="cms-right">
             <div class="cms-top">
-                <ul class="cms-nav">
+                <ul class="cms-nav uk-float-left">
                     <li>
                         <a class="cms-icon uk-icon-wordpress"></a>
                         <ul>
@@ -270,10 +284,10 @@
                     <li>
                         <a class="cms-icon uk-icon-info-circle"></a>
                         <ul>
-                            <li><a>查看网站</a></li>
-                            <li><a>网站状态</a></li>
-                            <li><a>站长统计</a></li>
-                            <li><a>系统设置</a></li>
+                            <li><a><i class="cms-icon no-icon"></i>查看网站</a></li>
+                            <li><a><i class="cms-icon no-icon"></i>网站状态</a></li>
+                            <li><a><i class="cms-icon no-icon"></i>站长统计</a></li>
+                            <li><a><i class="cms-icon no-icon"></i>系统设置</a></li>
                             <div class="clearfix"></div>
                         </ul>
                     </li>
@@ -281,11 +295,11 @@
                     <li>
                         <a class="cms-icon uk-icon-user"></a>
                         <ul>
-                            <li><a>撰写文章</a></li>
-                            <li><a>新建页面</a></li>
-                            <li><a>添加分类</a></li>
-                            <li><a>上传媒体</a></li>
-                            <li><a>新增用户</a></li>
+                            <li><a><i class="cms-icon no-icon"></i>撰写文章</a></li>
+                            <li><a><i class="cms-icon no-icon"></i>新建页面</a></li>
+                            <li><a><i class="cms-icon no-icon"></i>添加分类</a></li>
+                            <li><a><i class="cms-icon no-icon"></i>上传媒体</a></li>
+                            <li><a><i class="cms-icon no-icon"></i>新增用户</a></li>
                             <div class="clearfix"></div>
                         </ul>
                     </li>
@@ -293,10 +307,10 @@
                     <li>
                         <a class="cms-icon uk-icon-cog"></a>
                         <ul>
-                            <li><a>文章评论</a></li>
-                            <li><a>站内私信</a></li>
-                            <li><a>系统通知</a></li>
-                            <li><a>发送消息</a></li>
+                            <li><a><i class="cms-icon no-icon"></i>文章评论</a></li>
+                            <li><a><i class="cms-icon no-icon"></i>站内私信</a></li>
+                            <li><a><i class="cms-icon no-icon"></i>系统通知</a></li>
+                            <li><a><i class="cms-icon no-icon"></i>发送消息</a></li>
                             <div class="clearfix"></div>
                         </ul>
                     </li>
@@ -304,7 +318,9 @@
                     <div class="clearfix"></div>
                 </ul>
             </div>
-            <div class="cms-content"></div>
+            <div class="cms-content">
+                <div class="cms-content-wrap"></div>
+            </div>
         </div>
         <!--  JS库  -->
         <script src="/Public/js/require.js?<?php ver()?>"></script> 
@@ -319,8 +335,9 @@
                 }
             });
             requirejs(['jquery'], function(){
-                requirejs(['uikit', 'components/tooltip.min']);
-                $.getScript('main.js');
+                requirejs(['uikit', 'components/tooltip.min'], function(){
+                    $.getScript('main.js');
+                });
             });
         </script>
     </body>

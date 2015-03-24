@@ -3,6 +3,7 @@ t1/
 Old.Files/
 sucai/
 pagekit/
+_Yueruan/Runtime/
 .idea/
 landx/
 *.7z
@@ -12,3 +13,5 @@ test/
 .settings/
 .project
 *.kup
+*.cmd
+*.bat

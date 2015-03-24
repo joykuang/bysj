@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <title>Letv is coming  Amazing awaits...</title>
+    <!-- 声明文档使用的字符编码 -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- 为移动设备添加 viewport --><!-- `width=device-width` 会导致 iPhone 5 添加到主屏后以 WebApp 全屏模式打开页面时出现黑边 http://bigc.at/ios-webapp-viewport-meta.orz -->
+    <meta content="width=device-width,initial-scale=0.6,user-scalable=no" name="viewport">
+    <!--"添加到主屏幕"后，全屏显示 -->
+    <meta name="apple-touch-fullscreen" content="yes">
+    <!--IOS私有属性(apple-mobile-web-app-capable),启用 webapp 模式, 会隐藏工具栏和菜单栏，和其它配合使用。-->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!--在webapp模式下，改变顶部状态条的颜色。-->
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <!--忽略将页面中的数字识别为电话号码 -->
+    <meta content="telephone=no" name="format-detection">
+    <!-- iOS 设备 begin -->
+    <meta name="apple-mobile-web-app-title" content="手机乐视">
+    <link rel="Shortcut Icon" href="./favicon.ico" />
+    <link rel="apple-touch-icon-precomposed" href="./appLetv.png"/>
+    <!--
+    <base href="http://10.58.102.36/" /></base>
+    -->
+    <style>
+        *{ padding: 0; margin: 0;}
+        a {  color: #000000;  text-decoration: none  }
+        body{ text-align: center; height: 100%;  }
+        .cnt{ position: relative; top: 14%;}
+        .cnt1{ display: inline-block; width: 400px; height: 240px; background: url('./yqh_1.png') no-repeat center top; background-size: 100%; }
+
+        .footer{ position: absolute; width: 190px; height: 100px; bottom: 6%; left:50%;  margin-left: -95px;  background: url('./yqh_2.png') no-repeat center top; background-size: 100%;}
+        .footer a{  display: block; height: 100px; width: 100%;}
+    </style>
+    <script type="text/javascript">
+        function setHeight() {
+            var max_height = document.documentElement.clientHeight;
+            var primary = document.getElementById('primary');
+            primary.style.height = max_height+"px";
+        }
+    </script>
+</head>
+
+
+<body  onload="setHeight()" onresize="setHeight()">
+    <div  id="primary">
+        <div class="cnt">
+            <div class="cnt1"></div>
+        </div>
+    <div class="footer">
+    </div>
+    </div>
+</body>
+</html>
