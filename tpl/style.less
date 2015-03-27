@@ -1,7 +1,9 @@
 @import "less/copyright.less";
 //@import "less/normalize.less";
+@import "less/rewrite_uikit.less";
 @import "less/variables.less";
 @import "less/fonts.less";
+@import "less/debug.less";
 
 * { box-sizing: border-box; font-family: @mobile; }
 a, a:hover { text-decoration: none; }
@@ -260,7 +262,11 @@ a, a:hover { text-decoration: none; }
                 width: 100%;
                 height:100%;
                 overflow: hidden;
-                overflow-y: scroll;
+                //overflow-y: scroll;
+                
+                & > h1 {
+                    margin-bottom: 8px;
+                }
             }
         }
     }

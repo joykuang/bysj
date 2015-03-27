@@ -319,7 +319,17 @@
                 </ul>
             </div>
             <div class="cms-content">
-                <div class="cms-content-wrap"></div>
+                <div class="cms-content-wrap">
+                    <h1>欢迎使用</h1>
+                    <div class="uk-container uk-container-center">
+                        <div class="uk-grid">
+                            <div class="uk-width-1-4"><div class="block"></div></div>
+                            <div class="uk-width-1-4"><div class="block"></div></div>
+                            <div class="uk-width-1-4"><div class="block"></div></div>
+                            <div class="uk-width-1-4"><div class="block"></div></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <!--  JS库  -->
