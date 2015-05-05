@@ -1,0 +1,83 @@
+//变量设置
+@margin: 8px;
+@padding: @margin;
+
+
+
+
+
+
+
+
+//布局
+.uk-container {
+    //max-width: 980px;
+    padding-left: @padding;
+    padding-right: @padding;
+}
+
+.uk-container-fullwidth,
+.uk-container-fw,
+.uk-fullwidth,
+.uk-fw,{
+    max-width: 100%;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+.uk-grid {
+  margin-left: 0 - @margin;
+}
+.uk-grid > * {
+  padding-left: @padding;
+}
+@media (min-width: 1220px) {
+    .uk-container {
+        //max-width: 1200px;
+        padding-left: @padding;
+        padding-right: @padding;
+    }
+    .uk-grid {
+    margin-left: 0 - @padding;
+    }
+    .uk-grid > * {
+    padding-left: @padding;
+    }
+}
+
+
+//边距与边框
+.uk-margin-bottom {
+  margin-bottom: @margin !important;
+}
+
+.uk-margin-bottom16 {
+  margin-bottom: @margin*2 !important;
+}
+
+
+
+//组件
+.uk-alert {
+  padding: @padding;
+}
+
+.uk-panel-box {
+  padding: @padding;
+  
+  h3.uk-panel-title {
+    margin-bottom: @margin;
+    & > i {
+       width: 24px;
+       text-align: center;
+       margin-right: @margin;
+    }
+  }
+}
+
+.uk-comment-header {
+  margin-bottom: @margin;
+  padding: @padding;
+}
+.uk-comment-avatar {
+  margin-right: @margin;
+}

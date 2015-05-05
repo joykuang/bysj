@@ -1,4 +1,6 @@
-﻿<?php/*
+<?php
+
+/*
 	 function getgroupname($gid) {
 		$Group = M('user_group');	
 		$Group_list = $Group->find($gid);
