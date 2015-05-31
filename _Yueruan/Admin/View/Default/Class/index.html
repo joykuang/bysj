@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <!-- http://bigc.at/ios-webapp-viewport-meta.orz -->
+  <meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta content="telephone=no" name="format-detection">
+  <meta name="apple-mobile-web-app-title" content="道CMS">
+  <!--link rel="Shortcut Icon" href=" http://www.letv.com/favicon.ico" />
+  <link rel="apple-touch-icon-precomposed" href="http://i1.letvimg.com/img/201310/09/appLetv.png"/-->
+  <title>我的网站 &rsaquo;&rsaquo; Dao CMS 内容管理系统 @Powered By 悦软工作室(Yueruan Studio)</title>
+  <link href="__PUBLIC__/plugins/uikit/css/uikit.almost-flat.min.css" rel="stylesheet">     
+  <link href="__PUBLIC__/plugins/uikit/css/components/tooltip.almost-flat.min.css" rel="stylesheet">
+  <link href="__PUBLIC__/plugins/uikit/css/components/notify.almost-flat.min.css" rel="stylesheet">
+  <link href="__PUBLIC__/css/admin.css" rel="stylesheet">  
+  </head>
+
+  <body class="cms">
+    <include file="./_Yueruan/Admin/View/Default/Include/sidebar.html" />
+    <div class="cms-right">
+      <include file="./_Yueruan/Admin/View/Default/Include/top.html" />
+      <div class="cms-content">
+        <div class="cms-content-wrap">
+          <h1>全部分类</h1>
+          <div class="uk-container uk-container-center uk-fw">
+            <div class="uk-grid">
+              <div class="uk-width-1-1 uk-margin-bottom">
+                <div class="uk-alert uk-alert-small" data-uk-alert>
+                  <a class="uk-alert-close uk-close"></a>
+                  <p>欢迎使用道&middot;内容管理系统（DaoCMS）,您可以点击这里快速熟悉使用本系统的基本功能，又或者点击下面任务进行下一步操作。</p>
+                </div>
+              </div>
+
+              <div class="uk-width-1-3 uk-form">
+               <div class="uk-panel uk-panel-box" style="line-height: 30px; font-size: 20px;"><span class="uk-icon-folder-open"></span> 新建分类</div>
+               <div class="uk-panel uk-panel-box" style="margin: 8px 0 0 0;">
+                <div class="uk-width-1-1 uk-form-row">
+                 <div class="uk-grid">
+                  <div class="uk-width-3-10">
+                    <div class="uk-h3 uk-button-large uk-width-1-1 uk-text-bold" style="padding: 0 7px;">分类名称</div>
+                  </div>
+                   <div class="uk-width-7-10">
+                      <input type="text" placeholder="分类名称..." class="uk-form-large uk-width-1-1">
+                   </div>
+                 </div>
+                </div>
+                
+                <div class="uk-width-1-1 uk-form-row">
+                 <div class="uk-grid">
+                  <div class="uk-width-3-10">
+                    <div class="uk-h3 uk-button-large uk-width-1-1 uk-text-bold" style="padding: 0 7px;">URL别名</div>
+                  </div>
+                   <div class="uk-width-7-10">
+                      <input type="text" placeholder="URL别名..." class="uk-form-large uk-width-1-1">
+                   </div>
+                 </div>
+                </div>
+               
+               
+                <div class="uk-width-1-1 uk-form-row">
+                 <div class="uk-grid">
+                  <div class="uk-width-3-10">
+                    <div class="uk-h3 uk-button-large uk-width-1-1 uk-text-bold" style="padding: 0 7px;">分类节点</div>
+                  </div>
+                   <div class="uk-width-7-10">
+                      <select class="uk-form-large uk-width-1-1" name="data_class">
+                        <option value="">├已审核</option>
+                        <option value="">│├已审核</option>
+                        <option value="">│├已审核</option>
+                        <option value="">│└已审核</option>
+                        <option value="">├待审核</option>
+                        <option value="">├已冻结</option>
+                        <option value="">└已回收</option>
+                      </select>
+                   </div>
+                 </div>
+                </div>
+                
+                <div class="uk-width-1-1 uk-form-row">
+                  <div class="uk-h3 uk-button-large uk-width-1-1 uk-text-bold" style="padding: 0 7px;">分类简介</div>
+                  <textarea class="uk-width-1-1" rows="6" placeholder="分类简介/描述~"></textarea>
+                </div>
+                
+                <div class="uk-width-1-1 uk-form-row">
+                  <a href="" class="uk-button uk-button-primary">添加分类</a>
+                </div>
+                
+               </div>
+              </div>
+              <div class="uk-width-2-3">
+              <div class="uk-width-1-1 uk-margin-bottom">
+                <div class="uk-panel uk-panel-box uk-form">
+                  <div class="uk-form-row manager-toolbar">
+                    <select>
+                      <option>批量操作</option>
+                      <option>全部删除</option>
+                    </select>
+                    
+                    <button class="uk-button uk-margin-right" type="button" >执行</button>                 
+                  </div>
+                </div>
+              </div>
+              
+                <div class="uk-width-1-1 uk-margin-bottom uk-form">
+                <div class="uk-panel uk-panel-box">
+                  <table class="uk-table uk-table-hover uk-table-striped">
+                    <thead>
+                      <tr>
+                        <th width="3%"><input type="checkbox" id="selectAll"></th>
+                        <th width="17%">分类名称</th>
+                        <th width="40%">分类从属</th>
+                        <th width="20%">分类别名</th>
+                        <th width="5%">排序</th>
+                        <th width="5%">操作</th>
+                      </tr>
+                    </thead>
+
+                    <tbody>
+                     <volist name="class" id="class">
+                      <tr>
+                        <td><input type="checkbox" name="post_id[]" value="{$class.class_id}"></td>
+                        <td>{$class.class_title}</td>
+                        <td>{$class.class_class_id|getData=###,"class","title"}</td>
+                        <td>{$class.class_plug}</td>
+                        <td>{$class.class_sort}</td>
+                        <td><a class="cmd-edit">编辑</a>&nbsp;&nbsp;<a href="{:U('/_Dao/Class/delete/id')}/{$class.class_id}">删除</a></td>
+                      </tr>
+                      </volist>
+                      
+                      </tbody>
+                  </table>
+                  
+                </div>
+              </div>
+              
+              <div class="uk-width-1-1 uk-margin-bottom">
+                <div class="uk-panel uk-panel-box uk-form">
+                  <div class="uk-form-row manager-toolbar">
+                    <select>
+                      <option>批量操作</option>
+                      <option>全部删除</option>
+                    </select>
+                    
+                    <button class="uk-button uk-margin-right" type="button" >执行</button>                 
+                  </div>
+                </div>
+              </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="__PUBLIC__/plugins/jquery/jquery-1.11.2.min.js"></script>
+    <script src="__PUBLIC__/plugins/uikit/js/uikit.min.js"></script>
+    <script src="__PUBLIC__/plugins/uikit/js/components/tooltip.min.js"></script>
+    <script src="__PUBLIC__/plugins/uikit/js/components/notify.min.js"></script>
+    <script src="__PUBLIC__/js/admin.js"></script> 
+    <script>
+      $(function(){
+        console.log('jQuery 版本：'+ $().jquery);
+        console.log('UIkit  版本：'+ UIkit.version);
+        
+        //侧边栏菜单初始化
+        $('.sidebar-class').addClass('active').find('.uk-icon-angle-right').removeClass('uk-icon-angle-right').addClass('uk-icon-angle-down');
+        $('.sidebar-class-list').addClass('active');
+        
+        
+        
+        
+        
+        $('.cmd-delete').on('click', function(){
+          var current=$(this),
+              url='{:U("_Dao/Post/delete/id")}/' +current.attr('data-delete'),
+              message = '<h3>您确认要删除此记录？</h3>';
+              message += '<p><b class="uk-margin-right">条目</b>'+current.parent().parent().find('td:nth-child(2)').text()+'<br>',
+              message += '<b class="uk-margin-right">分类</b>'+current.parent().parent().find('td:nth-child(5)').text()+'<br>', 
+              message += '<b class="uk-margin-right">作者</b>'+current.parent().parent().find('td:nth-child(3)').text()+'<br>', 
+              message += '<b class="uk-margin-right">时间</b>'+current.parent().parent().find('td:nth-child(6)').text()+'</p>',
+          
+          UIkit.modal.confirm(message,function(){
+            $.get(url, function(data, status, xhr){
+              if (status == 'success') {
+                UIkit.notify('# '+data.message, {status: data.class});
+                current.parent().parent().slideUp(800, function(){
+                  $(this).remove();
+                });
+              }
+            });
+          });
+          
+        });
+        
+        $('.cms-content-wrap').css('background-color', 'transparent');
+        
+      });
+    </script>
+  </body>
+</html>

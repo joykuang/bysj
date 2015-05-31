@@ -37,7 +37,6 @@ class Sqlite extends Driver {
         list($tableName) = explode(' ', $tableName);
         $result =   $this->query('PRAGMA table_info( '.$tableName.' )');
         $info   =   array();
-		/*
         if($result){
             foreach ($result as $key => $val) {
                 $info[$val['field']] = array(
@@ -49,21 +48,7 @@ class Sqlite extends Driver {
                     'autoinc' => (strtolower($val['extra']) == 'auto_increment'),
                 );
             }
-        }*/
-		// TODO: Fix sqlite 无法写入。
-		 if($result){
-            foreach ($result as $key => $val) {
-                $info[$val['name']] = array(
-                    'name'    => $val['name'],
-                    'type'    => $val['type'],
-                    'notnull' => (bool) ($val['notnull'] === '1'), // not null is empty, null is yes
-                    'default' => $val['default'],
-                    'primary' => (strtolower($val['dflt_value']) == 'pri'),
-                    'autoinc' => (strtolower($val['extra']) == 'auto_increment'),//此句没啥用
-                );
-            }
-		}	
-		
+        }
         return $info;
     }
 

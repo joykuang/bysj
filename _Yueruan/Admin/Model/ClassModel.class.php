@@ -5,7 +5,7 @@ use Think\Model;
 class ClassModel extends Model{
     
 /**
- * 文章列表
+ * 分类列表
  * @author Joy Kuang <q-cute@163.com>
  */
     public function getClassList($recordset_count = 10, $condition = array()){

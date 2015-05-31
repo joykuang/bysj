@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <!-- http://bigc.at/ios-webapp-viewport-meta.orz -->
+  <meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta content="telephone=no" name="format-detection">
+  <meta name="apple-mobile-web-app-title" content="道CMS">
+  <title>我的网站 &rsaquo;&rsaquo; Dao CMS 内容管理系统 @Powered By 悦软工作室(Yueruan Studio)</title>
+  <link href="__PUBLIC__/plugins/uikit/css/uikit.almost-flat.min.css" rel="stylesheet">     
+  <link href="__PUBLIC__/plugins/uikit/css/components/placeholder.almost-flat.min.css" rel="stylesheet">
+  <link href="__PUBLIC__/plugins/uikit/css/components/notify.almost-flat.min.css" rel="stylesheet">
+  <link href="__PUBLIC__/plugins/uikit/css/components/progress.almost-flat.min.css" rel="stylesheet">
+  <link href="__PUBLIC__/plugins/uikit/css/components/upload.almost-flat.min.css" rel="stylesheet">
+  <link href="__PUBLIC__/css/admin.css" rel="stylesheet"> 
+  </head>
+
+  <body class="cms">
+    <include file="./_Yueruan/Admin/View/Default/Include/sidebar.html" />
+    <div class="cms-right">
+      <include file="./_Yueruan/Admin/View/Default/Include/top.html" />
+      <div class="cms-content">
+        <div class="cms-content-wrap">
+          <h1>上传媒体</h1>
+          <div class="uk-container uk-container-center uk-fw">
+            <div class="uk-grid">
+              <div class="uk-width-1-1">
+                <div id="upload-drop" class="uk-placeholder uk-width-1-1 uk-text-center" style="height: 240px;line-height: 200px;border-width: 4px;">
+                  <p>
+                    <i class="uk-icon-cloud-upload uk-icon-medium uk-text-muted uk-margin-small-right" style="font-size: 180%"></i> 将文件拖到此处或者<a class="uk-form-file">选择文件<input id="upload-select" type="file"></a>以上传。
+                  </p>
+                  <style>
+                    .uk-form-file {
+                      display: inline-block;
+                      position: relative;
+                      overflow: hidden;
+                      margin-bottom: 0;
+                      vertical-align: middle;
+                      font-weight: bold;
+                    }
+                    
+                    .uk-form-file input[type=file] {
+                      position: absolute;
+                      top: 0;
+                      z-index: 1;
+                      width: 100%;
+                      opacity: 0;
+                      cursor: pointer;
+                      left: 0;
+                      font-size: 500px;
+                    }
+                  </style>
+                </div>
+                <div id="progressbar" class="uk-progress uk-hidden">
+                  <div class="uk-progress-bar uk-progress-striped" style="width: 0%;"></div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+          <p style="margin: 0">注：上传文件格式仅支持JPG/JPEG/PNG/BMP/GIF，文件大小不超过2MB，相关设置请直接更改 <code>php.ini</code> 。</p>
+          <ul class="uk-list uk-width-1-1 media-preview-list" style="margin: 0">
+            
+          </ul>
+          <style>
+            .media-preview{
+              box-shadow: 0 1px 3px #cfcfcf;
+              height: 64px;
+              background-color: #fafafa;
+            }
+            .media-preview+.media-preview {
+              margin-top: 8px;
+            }
+            .media-preview p,
+            .media-preview p+p{
+              margin: 0;
+            }
+            .media-preview .cms-bg{
+              width: 60px;
+              height: 60px;
+              margin: 2px 8px 2px 2px;
+              float: left;
+            }
+          </style>
+        </div>
+      </div>
+    </div>
+    <script src="__PUBLIC__/plugins/jquery/jquery-1.11.2.min.js"></script>
+    <script src="__PUBLIC__/plugins/uikit/js/uikit.min.js"></script>
+    <script src="__PUBLIC__/plugins/uikit/js/components/upload.min.js"></script>
+    <script src="__PUBLIC__/plugins/uikit/js/components/notify.min.js"></script>
+    <script src="__PUBLIC__/js/admin.js"></script> 
+    <script>
+      $(function(){
+        //侧边栏菜单初始化
+        $('.sidebar-media').addClass('active').find('.uk-icon-angle-right').removeClass('uk-icon-angle-right').addClass('uk-icon-angle-down');
+        $('.sidebar-media-upload').addClass('active');
+        var progressbar = $("#progressbar"),
+            bar         = progressbar.find('.uk-progress-bar'),
+            settings    = {
+            action: '/_Dao/Media/save', // upload url
+            allow : '*.(jpg|jpeg|gif|png)', // allow only images
+            loadstart: function() {
+                bar.css("width", "0%").text("0%");
+                progressbar.removeClass("uk-hidden");
+            },
+            progress: function(percent) {
+                percent = Math.ceil(percent);
+                bar.css("width", percent+"%").text(percent+"%");
+            },
+            allcomplete: function(response) {
+              response = JSON.parse(response);
+                bar.css("width", "100%").text("100%");
+                setTimeout(function(){
+                    progressbar.addClass("uk-hidden");
+                }, 250);
+                if (response.name != undefined) {
+                  UIkit.notify('<div class="uk-text-center"><span class="uk-icon-smile-o text-light-green" style="font-size: 64px"></span></div><div class="uk-margin-top"><h3 class="text-green" style="margin: 0 0 4px 0">文件上传成功！</h3></div>', {status: 'success'});
+              var html  = '<li class="media-preview">';
+                  html += '<div class="cms-bg" data-bgsrc="/Uploads/'+response.savepath+response.savename+'"></div>',
+                  html += '<div class="uk-float-left">',
+                  html += '<p>文件：'+response.name+'</p>',
+                  html += '<p>大小：'+parseInt(response.size/1024)+'KB</p><p>类型：'+response.type+'</p>',
+                  html += '</div><div class="uk-float-right" style="line-height: 20px; margin: 22px 8px">',
+                  html += '<a class="uk-margin-right uk-text-success cmd-preview" data-filename="'+response.name+'" data-filesize="'+parseInt(response.size/1024)+'KB" data-filetype="'+response.type+'" data-fileauthor="Joy Kuang" data-filedate="2015年5月16日" data-fileurl="/Uploads/'+response.savepath+response.savename+'">',
+                  html += '<span class="uk-icon-eye"></span> 预览</a>',
+                  html += '<a href="#" class="uk-margin-right"><span class="uk-icon-edit"></span> 编辑</a></div></li>';
+                $('.media-preview-list').append(html);
+                $('.cmd-preview').on('click', function(){
+                  html = '';
+                  html += '<img src="'+$(this).attr('data-fileurl')+'">',
+                  html += '<div class="uk-margin-top">',
+                  html += '<div>文件：'+$(this).attr('data-filename')+'</div>',
+                  html += '<div>大小：'+$(this).attr('data-filesize')+'</div>',
+                  html += '<div>类型：'+$(this).attr('data-filetype')+'</div>',
+                  html += '<div>作者：'+$(this).attr('data-fileauthor')+'</div>',
+                  html += '<div>日期：'+$(this).attr('data-filedate')+'</div>',
+                  html += '<div>URL：<a href="'+$(this).attr('data-fileurl')+'" target="_blank">'+$(this).attr('data-fileurl')+'</a></div>',
+                  html += '</div>';
+                  UIkit.modal.alert(html);
+                });
+                $('.media-preview-list [data-bgsrc]').each(function(index){
+                  var c= $(this),
+                      bgsrc = c.attr('data-bgsrc');
+                      c.css('background-image', 'url('+bgsrc+')');
+                });
+              }
+              else UIkit.notify('<div class="uk-text-center"><span class="uk-icon-frown-o text-red" style="font-size: 64px"></span></div><div class="uk-margin-top"><h3 class="text-red" style="margin: 0 0 4px 0">文件上传失败！</h3>可能的原因：“'+response+'”</div>', {status: 'danger'});
+            }
+        };
+        var select = UIkit.uploadSelect($("#upload-select"), settings),
+            drop   = UIkit.uploadDrop($("#upload-drop"), settings);
+        //Debug
+        $('.cms-content-wrap').css('background-color', 'transparent');
+        $('[data-bgsrc]').each(function(index){
+      var c= $(this),
+          bgsrc = c.attr('data-bgsrc');
+          c.css('background-image', 'url('+bgsrc+')');
+        });
+      });
+    </script>
+  </body>
+</html>

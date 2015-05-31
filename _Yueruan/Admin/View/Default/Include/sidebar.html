@@ -1,0 +1,240 @@
+    <!-- Part: Sidebar -->
+    <div class="cms-left">
+     <!--
+      <div class="cms-left-account">
+        <img class="avatar" src="__PUBLIC__/img/osang.jpg">
+      </div>
+      -->
+      <ul class="cms-left-sidebar">
+        <li class="sidebar-item sidebar-dashboard">
+          <a class="item-link">
+            <span class="link-item link-icon uk-icon-dashboard"></span>
+            <span class="link-item link-title">导航表</span>
+            <span class="link-item link-arrow uk-icon-angle-right"></span>
+            <div class="clearfix"></div>
+          </a>
+          <ul class="sub-menu">
+            <h3>导航表</h3>
+            <li class="sub-link sidebar-dashboard-index"><a href='{:U("_Dao/Index/index")}'>后台首页</a></li>
+            <li class="sub-link sidebar-dashboard-home"><a href="/" target="_blank">网站首页</a></li><!--
+            <li class="sub-link"><a href="javascript:;">程序支持</a></li>
+            <li class="sub-link"><a href="javascript:;">程序更新</a></li>
+            -->
+            <li class="sub-link sidebar-dashboard-phpinfo"><a href='{:U("_Dao/Index/info")}'>服务器信息</a></li>
+            <li class="sub-link sidebar-dashboard-database"><a href='{:U("/data.php")}' target="_blank">数据库管理</a></li>
+          </ul>
+          <div class="clearfix"></div>
+        </li>
+        <li class="sidebar-item sidebar-post">
+          <a class="item-link">
+            <span class="link-item link-icon uk-icon-file-text"></span>
+            <span class="link-item link-title">文章</span>
+            <span class="link-item link-arrow uk-icon-angle-right"></span>
+            <div class="clearfix"></div>
+          </a>
+          <ul class="sub-menu">
+            <h3>文章</h3>
+            <li class="sub-link sidebar-post-list"><a href='{:U("_Dao/Post/index")}'>所有文章</a></li>
+            <li class="sub-link sidebar-post-edit"><a href='{:U("_Dao/Post/create")}'>撰写博文</a></li>
+            <!--
+            <li class="sub-link sidebar-post-comment"><a href='{:U("_Dao/Post/comment")}'>评论管理</a></li>
+            -->
+            <!--
+            <li class="sub-link"><a href="javascript:;">文章类型</a></li>
+            <li class="sub-link"><a href="javascript:;">文章回收</a></li>
+            -->
+          </ul>
+          <div class="clearfix"></div>
+        </li>
+        
+        <!--
+        <li class="sidebar-item sidebar-class">
+          <a class="item-link">
+            <span class="link-item link-icon uk-icon-folder-open"></span>
+            <span class="link-item link-title">分类</span>
+            <span class="link-item link-arrow uk-icon-angle-right"></span>
+            <div class="clearfix"></div>
+          </a>
+          <ul class="sub-menu">
+            <h3>分类</h3>
+            <li class="sub-link sidebar-class-list"><a href="/tpl/class.list.php">全部分类</a></li>
+            <li class="sub-link sidebar-class-tag"><a href="javascript:;">所有标签</a></li>
+          </ul>
+          <div class="clearfix"></div>
+        </li>
+        -->
+        <li class="sidebar-item sidebar-class">
+          <a class='item-link' href='{:U("_Dao/Class/index")}'>
+            <span class="link-item link-icon uk-icon-folder-open"></span>
+            <span class="link-item link-title">分类</span>
+            <div class="clearfix"></div>
+          </a>
+          <div class="clearfix"></div>
+        </li>
+        
+        <li class="sidebar-item sidebar-page">
+          <a class="item-link">
+            <span class="link-item link-icon uk-icon-file"></span>
+            <span class="link-item link-title">页面</span>
+            <span class="link-item link-arrow uk-icon-angle-right"></span>
+            <div class="clearfix"></div>
+          </a>
+          <ul class="sub-menu">
+            <h3>页面</h3>
+            <li class="sub-link sidebar-page-list"><a href='{:U("_Dao/Page/index")}'>所有页面</a></li>
+            <li class="sub-link sidebar-page-edit"><a href='{:U("_Dao/Page/edit")}'>新建页面</a></li>
+            <!--
+            <li class="sub-link"><a href="javascript:;">模板管理</a></li>
+            <li class="sub-link"><a href="javascript:;">页面类型</a></li>
+            -->
+          </ul>
+          <div class="clearfix"></div>
+        </li>
+        <li class="sidebar-item sidebar-media">
+          <a class="item-link">
+            <span class="link-item link-icon uk-icon-film"></span>
+            <span class="link-item link-title">媒体</span>
+            <span class="link-item link-arrow uk-icon-angle-right"></span>
+            <div class="clearfix"></div>
+          </a>
+          <ul class="sub-menu">
+            <h3>媒体</h3>
+            <li class="sub-link sidebar-media-list"><a href='{:U("_Dao/Media/index")}'>媒体管理</a></li>
+            <li class="sub-link sidebar-media-upload"><a href='{:U("_Dao/Media/upload")}'>上传文件</a></li>
+            
+            <!--
+            <li class="sub-link"><a href="javascript:;">文件统计</a></li>
+            <li class="sub-link"><a href="javascript:;">垃圾清理</a></li>
+            -->
+          </ul>
+          <div class="clearfix"></div>
+        </li>
+        
+        
+        <li class="sidebar-item sidebar-user">
+          <a class='item-link' href='{:U("_Dao/User/index")}'>
+            <span class="link-item link-icon uk-icon-user"></span>
+            <span class="link-item link-title">用户</span>
+            <div class="clearfix"></div>
+          </a>
+          <div class="clearfix"></div>
+        </li>
+        <!--
+        <li class="sidebar-item sidebar-user">
+          <a class="item-link">
+            <span class="link-item link-icon uk-icon-user"></span>
+            <span class="link-item link-title">用户</span>
+            <span class="link-item link-arrow uk-icon-angle-right"></span>
+            <div class="clearfix"></div>
+          </a>
+          <ul class="sub-menu">
+            <h3>用户</h3>
+            <li class="sub-link"><a href="javascript:;">我的账号</a></li>
+            <li class="sub-link"><a href="javascript:;">所有用户</a></li>
+            <li class="sub-link"><a href="javascript:;">群组管理</a></li>
+            <li class="sub-link"><a href="javascript:;">角色指派</a></li>
+            <li class="sub-link"><a href="javascript:;">权限分配</a></li>
+          </ul>
+          <div class="clearfix"></div>
+        </li>
+        
+        <li class="sidebar-item sidebar-theme" style="margin-top: 1em;">
+          <a class="item-link">
+            <span class="link-item link-icon uk-icon-magic"></span>
+            <span class="link-item link-title">主题</span>
+            <span class="link-item link-arrow uk-icon-angle-right"></span>
+            <div class="clearfix"></div>
+          </a>
+          <ul class="sub-menu">
+            <h3>主题</h3>
+            <li class="sub-link"><a href="javascript:;">所有主题</a></li>
+            <li class="sub-link"><a href="javascript:;">主题安装</a></li>
+            <li class="sub-link"><a href="javascript:;">主题市场</a></li>
+          </ul>
+          <div class="clearfix"></div>
+        </li>
+        <li class="sidebar-item sidebar-plugin">
+          <a class="item-link">
+            <span class="link-item link-icon uk-icon-puzzle-piece"></span>
+            <span class="link-item link-title">扩展</span>
+            <span class="link-item link-arrow uk-icon-angle-right"></span>
+            <div class="clearfix"></div>
+          </a>
+          <ul class="sub-menu">
+            <h3>扩展</h3>
+            <li class="sub-link"><a href="javascript:;">所有插件</a></li>
+            <li class="sub-link"><a href="javascript:;">插件安装</a></li>
+            <li class="sub-link"><a href="javascript:;">插件市场</a></li>
+            <li class="sub-link"><a href="javascript:;">导入</a></li>
+            <li class="sub-link"><a href="javascript:;">导出</a></li>
+          </ul>
+          <div class="clearfix"></div>
+        </li>
+        <li class="sidebar-item sidebar-database">
+          <a class="item-link">
+            <span class="link-item link-icon uk-icon-database"></span>
+            <span class="link-item link-title">数据</span>
+            <span class="link-item link-arrow uk-icon-angle-right"></span>
+            <div class="clearfix"></div>
+          </a>
+          <ul class="sub-menu">
+            <h3>数据</h3>
+            <li class="sub-link"><a href="javascript:;">数据库状态</a></li>
+            <li class="sub-link"><a href="javascript:;">优化数据库</a></li>
+            <li class="sub-link"><a href="javascript:;">备份数据库</a></li>
+            <li class="sub-link"><a href="javascript:;">恢复数据库</a></li>
+            <li class="sub-link"><a href="javascript:;">修复数据库</a></li>
+            <li class="sub-link"><a href="javascript:;">管理数据库</a></li>
+            <li class="sub-link"><a href="javascript:;">重置数据库</a></li>
+          </ul>
+          <div class="clearfix"></div>
+        </li>
+        
+        <li class="sidebar-item sidebar-configuration">
+          <a class="item-link">
+            <span class="link-item link-icon uk-icon-cog"></span>
+            <span class="link-item link-title">设置</span>
+            <span class="link-item link-arrow uk-icon-angle-right"></span>
+            <div class="clearfix"></div>
+          </a>
+          <ul class="sub-menu">
+            <h3>设置</h3>
+            <li class="sub-link"><a href="javascript:;">一般设置</a></li>
+            <li class="sub-link"><a href="javascript:;">内容设置</a></li>
+            <li class="sub-link"><a href="javascript:;">阅读设置</a></li>
+            <li class="sub-link"><a href="javascript:;">路由设置</a></li>
+            <li class="sub-link"><a href="javascript:;">安全设置</a></li>
+            <li class="sub-link"><a href="javascript:;">高级设置</a></li>
+          </ul>
+          <div class="clearfix"></div>
+        </li>
+        -->
+        <li class="sidebar-item sidebar-option">
+          <a class='item-link' href='{:U("_Dao/Option/index")}'>
+            <span class="link-item link-icon uk-icon-cog"></span>
+            <span class="link-item link-title">设置</span>
+            <div class="clearfix"></div>
+          </a>
+          <div class="clearfix"></div>
+        </li>
+        
+        <li class="sidebar-item sidebar-about tooltip-about">
+          <a class="item-link">
+            <span class="link-item link-icon uk-icon-info-circle"></span>
+            <span class="link-item link-title">关于</span>
+            <div class="clearfix"></div>
+          </a>
+          <div class="clearfix"></div>
+        </li>
+        <li class="sidebar-item sidebar-last tooltip-switcher" style="display: none;">
+          <a class="item-link sidebar-switcher">
+            <span class="link-item link-icon uk-icon-arrow-circle-left"></span>
+            <span class="link-item link-title" style="font-size: 12px;">折叠菜单</span>
+            <div class="clearfix"></div>
+          </a>
+          <div class="clearfix"></div>
+        </li>
+        <div class="clearfix"></div>
+      </ul>
+    </div>
+    <!-- Part: Sidebar --EOF-- -->

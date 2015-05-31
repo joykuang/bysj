@@ -24,4 +24,9 @@ return array(
         'DB_PWD'           =>        'joy',
         'DB_PREFIX'       =>        'cms_',
         */
+    'DEFAULT_THEME' => 'Default',
+    'TMPL_PARSE_STRING'   =>    array(
+      '__VIEW__' => '/_Yueruan/Home/View',
+      '__DEFAULT__' => '/_Yueruan/Home/View/Default'
+    ),
 );

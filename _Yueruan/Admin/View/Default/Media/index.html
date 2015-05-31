@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <!-- http://bigc.at/ios-webapp-viewport-meta.orz -->
+  <meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta content="telephone=no" name="format-detection">
+  <meta name="apple-mobile-web-app-title" content="道CMS">
+  <!--link rel="Shortcut Icon" href=" http://www.letv.com/favicon.ico" />
+  <link rel="apple-touch-icon-precomposed" href="http://i1.letvimg.com/img/201310/09/appLetv.png"/-->
+  <title>我的网站 &rsaquo;&rsaquo; Dao CMS 内容管理系统 @Powered By 悦软工作室(Yueruan Studio)</title>
+  <link href="__PUBLIC__/plugins/uikit/css/uikit.almost-flat.min.css" rel="stylesheet">     
+  <link href="__PUBLIC__/plugins/uikit/css/components/tooltip.almost-flat.min.css" rel="stylesheet">
+  <link href="__PUBLIC__/plugins/uikit/css/components/notify.almost-flat.min.css" rel="stylesheet">
+  <link href="__PUBLIC__/css/admin.css" rel="stylesheet"> 
+  <style>
+    .media-file {
+      /*width: 125px;
+      height: 125px;*/
+      border: 1px solid #ccc;
+      box-shadow: 0 0 3px #bbb;
+      position: relative;
+    }
+    
+    @media (min-width: 2559px) {
+      .media-file { width: 134px; height: 134px; }
+    }
+    
+    @media (max-width: 2559px) and (min-width: 1920px) {
+      .media-file { width: 127px; height: 127px; }
+    }
+    
+    @media (max-width: 1919px) and (min-width: 1600px) {
+      .media-file { width: 122px; height: 122px; }
+    }
+    
+    @media (max-width: 1599px) {
+      .media-file { width: 125px; height: 125px; }
+    }
+        
+    .media-width {
+      margin-bottom: 8px;
+    }
+    
+    .media-bg {
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    
+    .media-file-slect {
+        width: 32px;
+        height: 32px;
+        background-color: #1976d2;
+        top: -4px;
+        right: -4px;
+        position: absolute;
+    }
+    
+    .media-file-slect > [class*=uk-icon-] {
+        width: 28px;
+        height: 28px;
+        border: 1px solid #fff;
+        margin: 2px;
+        line-height: 26px;
+        text-align: center;
+        background-color: #1976d2;
+        color: #fff;
+        font-size: 18px;
+    }
+    
+    .media-hover {
+      background-color: rgba(0,0,0,0);
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      -webkit-transition: all .6s;
+      -o-transition: all .6s;
+      transition: all .6s;
+    }
+    
+    .media-hover:hover {
+      background-color: rgba(0,0,0,.32);
+    }
+    
+    .media-hover .icon{
+      display: none;
+      font-size: 18px;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+      transform: translateY(-50%);
+      width: 28px;
+      height: 28px;
+      border: 2px solid #fff;
+      text-align: center;
+      line-height: 24px;
+      position: absolute;
+      top: 50%;
+      color: #fff;
+      border-radius: 50%;
+    }
+    
+    .media-hover .icon.cmd-preview{
+      left: 24%;
+    }
+    
+    .media-hover .icon.cmd-delete{
+      right: 24%;
+      color: #f44336;
+      text-shadow: 1px 1px 0 #fff;
+    }
+    
+    .media-hover:hover .icon{
+      display: block;
+    }
+  </style>
+  </head>
+
+  <body class="cms">
+    <include file="./_Yueruan/Admin/View/Default/Include/sidebar.html" />
+    <div class="cms-right">
+      <include file="./_Yueruan/Admin/View/Default/Include/top.html" />
+      <div class="cms-content">
+        <div class="cms-content-wrap">
+          <h1>媒体管理</h1>
+          <div class="uk-container uk-container-center uk-fw">
+            <div class="uk-grid">
+              <div class="uk-width-1-1 uk-margin-bottom cmd-alert" style="display: none;">
+                <div class="uk-alert uk-alert-small" data-uk-alert>
+                  <a class="uk-alert-close uk-close"></a>
+                  <p>欢迎使用道&middot;内容管理系统（DaoCMS）,您可以点击这里快速熟悉使用本系统的基本功能，又或者点击下面任务进行下一步操作。</p>
+                </div>
+              </div>
+
+              <div class="uk-width-1-1 uk-margin-bottom">
+                <div class="uk-panel uk-panel-box uk-form">
+                  <div class="uk-form-row manager-toolbar">
+                   
+                    <a class='uk-button' href='{:U("_Dao/Media/upload")}'><span class="uk-icon-upload"></span> 上传</a>
+                    <!--
+                      <select>
+                       <option value="all">所有文件</option>
+                       <option value="image">所有图像</option>
+                       <option value="audio">所有音频</option>
+                       <option value="video">所有视频</option>
+                       <option value="document">所有文档</option>
+                       <option value="other">其他文件</option>
+                    </select>
+                    -->
+                    <select name="condition">
+                       <option value="">所有时间</option>
+                       
+                       <volist id="upload_date" name="upload_date">
+                       <option value="{$upload_date.upload_date}">{$upload_date.upload_date}</option>
+                       </volist>
+                       
+                    </select>
+                    <a class="uk-button uk-button-primary bg-light-blue cmd-condition" style="vertical-align: top;">筛选</a>
+                    
+                    <div class="uk-float-right">
+                     <!--
+                      <a class="uk-button" style="vertical-align: top;"><span class="uk-icon-th"></span></a>
+                      <a class="uk-button" style="vertical-align: top;"><span class="uk-icon-list"></span></a>
+                     -->
+                     
+                      <div class="uk-form-icon">
+                        <i class="uk-icon-search"></i>
+                        <input type="text" placeholder="搜索文件..." name="media_search">
+                      </div> 
+                      <a class="uk-button uk-button-primary bg-green cmd-search" style="vertical-align: top;">搜索</a>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+              
+            <div class="uk-width-1-1 uk-margin-bottom uk-form">
+            <div class="uk-panel uk-panel-box">
+
+              <div class="uk-width-1-1">
+              <div class="uk-grid media-filemanager">
+              
+                <volist id="upload" name="upload">
+                 <div class="media-width">
+                   <div class="media-file media-bg" data-bgsrc="/Uploads/{$upload.upload_savepath|substr=###,2}{$upload.upload_savename}" data-size="{$upload.upload_size}" data-type="{$upload.upload_type}" data-date="{$upload.upload_date|strtotime|date='Y年m月d日 @ H时i分s秒',###}" data-name="{$upload.upload_name}" data-excerpt="{$upload.upload_excerpt}" data-id="{$upload.upload_id}" data-author="{$upload.upload_author_id|getData=###,'user', 'nickname'}">
+                     <!--div class="media-file-slect"><div class="uk-icon-check"></div></div-->
+                     <div class="uk-position-absolute media-hover"><a href="#" class="uk-icon-eye icon cmd-preview"></a><a href="#" class="uk-icon-trash icon text-red border-red cmd-delete"></a></div>
+                   </div>
+                  </div>
+                </volist>
+              </div>
+            </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="__PUBLIC__/plugins/jquery/jquery-1.11.2.min.js"></script>
+    <script src="__PUBLIC__/plugins/uikit/js/uikit.min.js"></script>
+    <script src="__PUBLIC__/plugins/uikit/js/components/tooltip.min.js"></script>
+    <script src="__PUBLIC__/plugins/uikit/js/components/notify.min.js"></script>
+    <script src="__PUBLIC__/js/admin.js"></script> 
+    <script>
+      $(function(){
+        console.log('jQuery 版本：'+ $().jquery);
+        console.log('UIkit  版本：'+ UIkit.version);
+        
+        //侧边栏菜单初始化
+        $('.sidebar-media').addClass('active').find('.uk-icon-angle-right').removeClass('uk-icon-angle-right').addClass('uk-icon-angle-down');
+        $('.sidebar-media-list').addClass('active');
+        
+        $('.cmd-condition').on('click', function(){
+          var url =    '{:U("_Dao/Media/json/date")}',
+                 t    =    $('[name="condition"]'),
+                 s = $('[name="media_search"]').val();
+         if (t.val() != '') {
+           if (s != "") url += "/"+t.val()+"/search/"+s;
+           else url += '/'+t.val();
+            
+            $.get(url, function(data, status, xhr){
+              if (status == 'success') {
+                if (data.length > 0){
+                var html = '';
+                $.each(data,function(index, item){
+                  html += '<div class="media-width">';
+                  html += '<div class="media-file media-bg" data-bgsrc="/Uploads/'+item.upload_savepath.substr(2)+item.upload_savename;
+                  html += '" data-size="'+item.upload_size+'" data-type="'+item.upload_type+'" data-date="'+item.upload_datestr+'" data-name="'+item.upload_name+'" data-excerpt="'+item.upload_excerpt+'" data-author="'+item.upload_author+'">';
+                  html += '<!--div class="media-file-slect"><div class="uk-icon-check"></div></div-->';
+                  html += '<div class="uk-position-absolute media-hover"><a href="#" class="uk-icon-eye icon cmd-preview"></a><a href="#" class="uk-icon-trash icon text-red border-red cmd-delete"></a></div>';
+                  html += '</div></div>';
+                });
+                $('.media-filemanager').html(html);
+                loadImage();
+                preview();
+                } else {
+                $('.media-filemanager').html('<div class="media-width" style="width: 100%; height: 180px; padding: 32px 0; font-size: 24px; text-align: center;"><div class="uk-icon-frown-o" style="font-size: 64px;"></div><p>哎哟喂，咋找不到记录叻！</p></div>');
+                }
+                
+                }
+              });        
+         } else  console.log('[点击] [按钮]筛选 为空...');
+         
+        });
+        
+        $(document).on('click', '.cmd-delete', function(){
+          var c=$(this).parents('.media-file'),
+              url='{:U("_Dao/Media/delete/id")}/' +c.attr('data-id'),
+              message = '<h3>您确认要删除此图片？</h3>';
+              message += '<img src="'+c.attr('data-bgsrc')+'">';
+              message += '<p><b class="uk-margin-right">文件：</b>'+c.attr('data-name')+'<br>',
+              message += '<b class="uk-margin-right">大小：</b>'+parseInt(c.attr('data-size')/1024)+' KB<br>', 
+              message += '<b class="uk-margin-right">作者：</b>'+c.attr('data-author')+'<br>',
+              message += '<b class="uk-margin-right">时间：</b>'+c.attr('data-date')+'<br>';
+              //if (c.attr('data-excerpt') != null) message += '<b class="uk-margin-right">说明：</b>'+c.attr('data-excerpt');
+              message +='</p>';
+          
+          UIkit.modal.confirm(message,function(){
+            $.get(url, function(data, status, xhr){
+              if (status == 'success') {
+                UIkit.notify('# '+data.message, {status: data.class});
+                c.parent().remove();
+              }
+            });
+          });
+          
+        });
+        
+        var preview = function() {
+          $('.icon.cmd-preview').on('click', function(){
+            var c = $(this).parents('.media-file');
+            
+            html = '';
+            html += '<img src="'+c.attr('data-bgsrc')+'">',
+            html += '<div class="uk-margin-top">',
+            html += '<div>文件：'+c.attr('data-name')+'</div>',
+            html += '<div>大小：'+parseInt(c.attr('data-size')/1024)+' KB</div>',
+            html += '<div>类型：'+c.attr('data-type')+'</div>',
+            html += '<div>作者：'+c.attr('data-author')+'</div>',
+            html += '<div>日期：'+c.attr('data-date')+'</div>',
+            html += '<div>URL：<a href="'+c.attr('data-bgsrc')+'" target="_blank">'+c.attr('data-bgsrc')+'</a></div>',
+            html += '</div>';
+            UIkit.modal.alert(html);
+          });
+        }
+        window.preview = preview;
+        preview();
+        
+        $('.cmd-search').on('click', function(){
+          var search = $('[name="media_search"]').val();
+          if (search != '') {
+          var url =    '{:U("_Dao/Media/json/search")}',
+                 t    =    $('[name="condition"]').val("");
+                 search = trim(search),
+                 url += '/'+search;
+            $.get(url, function(data, status, xhr){
+              if (status == 'success') {
+                if (data.length > 0){
+                var html = '';
+                $.each(data,function(index, item){
+                      html += '<div class="media-width">';
+                      html += '<div class="media-file media-bg" data-bgsrc="/Uploads/'+item.upload_savepath.substr(2)+item.upload_savename;
+                      html += '" data-size="'+item.upload_size+'" data-type="'+item.upload_type+'" data-date="'+item.upload_datestr+'" data-name="'+item.upload_name+'" data-excerpt="'+item.upload_excerpt+'" data-author="'+item.upload_author+'">';
+                      html += '<!--div class="media-file-slect"><div class="uk-icon-check"></div></div-->';
+                      html += '<div class="uk-position-absolute media-hover"><a href="#" class="uk-icon-eye icon cmd-preview"></a><a href="#" class="uk-icon-trash icon text-red border-red cmd-delete"></a></div>';
+                      html += '</div></div>';
+                });
+                
+                $('.media-filemanager').html(html);
+                loadImage();
+                preview();
+                } else {
+                $('.media-filemanager').html('<div class="media-width" style="width: 100%; height: 180px; padding: 32px 0; font-size: 24px; text-align: center;"><div class="uk-icon-frown-o" style="font-size: 64px;"></div><p>哎哟喂，咋找不到记录叻！</p></div>');
+                }
+                
+                }
+              });  
+          } else console.log('[点击] [按钮]搜索 为空...');
+        });
+        
+        //Debug
+        $('.cms-content-wrap').css('background-color', 'transparent');
+        var loadImage = function(){
+          $('[data-bgsrc]').each(function(index){
+            var c= $(this),
+                bgsrc = c.attr('data-bgsrc');
+                c.css('background-image', 'url('+bgsrc+')');
+          });
+        }
+        window.loadImage = loadImage;
+        loadImage();
+        
+        function trim(str,is_global){
+          var result;
+             if (is_global !== undefined) is_global = is_global.toLowerCase();
+          result = str.replace(/(^\s+)|(\s+$)/g,"");
+          if(is_global =="g"){
+            result = result.replace(/\s/g,"");
+          }
+          return result;
+        }
+      });
+    </script>
+  </body>
+</html>

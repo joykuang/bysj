@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <!--  http://bigc.at/ios-webapp-viewport-meta.orz -->
+  <meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta content="telephone=no" name="format-detection">
+  <meta name="apple-mobile-web-app-title" content="道CMS">
+  <title>我的网站 &rsaquo;&rsaquo; Dao CMS 内容管理系统 @Powered By 悦软工作室(Yueruan Studio)</title>
+  <link href="__PUBLIC__/plugins/uikit/css/uikit.almost-flat.min.css" rel="stylesheet">     
+  <link href="__PUBLIC__/plugins/uikit/css/components/tooltip.almost-flat.min.css" rel="stylesheet">
+  <link href="__PUBLIC__/plugins/uikit/css/components/htmleditor.almost-flat.min.css" rel="stylesheet">
+  <link href="__PUBLIC__/plugins/uikit/css/components/form-password.almost-flat.min.css" rel="stylesheet">
+  <link href="__PUBLIC__/plugins/uikit/css/components/datepicker.almost-flat.min.css" rel="stylesheet">
+  <!--link href="__PUBLIC__/plugins/uikit/css/components/autocomplete.almost-flat.min.css" rel="stylesheet"-->
+  <link href="__PUBLIC__/plugins/uikit/css/components/placeholder.almost-flat.min.css" rel="stylesheet">
+  
+  <link href="__PUBLIC__/plugins/codemirror/lib/codemirror.css" rel="stylesheet">
+  <link href="__PUBLIC__/css/admin.css" rel="stylesheet">   
+
+  <style>
+    #cmd_visibility,
+    #cmd_date {
+      display: none;
+    }
+  </style>
+</head>
+
+  <body class="cms">
+    <include file="./_Yueruan/Admin/View/Default/Include/sidebar.html" />
+    <div class="cms-right">
+      <include file="./_Yueruan/Admin/View/Default/Include/top.html" />
+      <div class="cms-content">
+       <eq name="action" value="new">
+        <form class="cms-content-wrap" action="{:U('/_Dao/Post/save')}" method="post">
+        <else />
+         <form class="cms-content-wrap" action="{:U('/_Dao/Post/save')}/id/{:I('id')}" method="post">
+         </eq>
+          <h1>新增页面</h1>
+          <div class="uk-container uk-container-center uk-fw">
+            <div class="uk-grid">
+              <div class="uk-width-1-1 uk-margin-bottom">
+                <div class="uk-alert uk-alert-small" data-uk-alert>
+                  <a class="uk-alert-close uk-close"></a>
+                  <p>欢迎使用道&middot;内容管理系统（DaoCMS）,您可以点击这里快速熟悉使用本系统的基本功能，又或者点击下面任务进行下一步操作。</p>
+                </div>
+              </div>
+              
+              <div class="uk-width-1-1">
+                <div class="uk-panel uk-panel-box">
+                  <div class="uk-grid">
+                    <div class="uk-width-5-6" style="width: calc(100% - 320px);">
+                      <div class="uk-form">
+                        <div class="uk-form-row">
+                            <input type="text" placeholder="在此输入产品标题" class="uk-form-large uk-width-1-1" value="{$post.post_title}" name="post_title">
+                          </div>
+                          <div class="uk-form-row">
+                            <textarea class="uk-width-1-1" name="data_content">{$post.post_content}</textarea>
+                          </div>
+                          <div class="uk-form-row">
+                            <textarea class="uk-width-1-1" rows="5" placeholder="页面梗概/简介/描述~">{$post.post_excerpt}</textarea>
+                          </div>
+                      </div>
+                    </div>
+                    
+                        <div class="uk-width-1-6 uk-margin-bottom" style="width:320px;">
+                            <div class="uk-form">
+                                <div class="uk-grid">
+                                  <div class="uk-width-1-1 uk-margin-bottom">
+                                     <div class="uk-form-row" style="border-bottom: 1px solid #eee;">
+                                       <div class="uk-h3 uk-button-large uk-width-1-1 uk-text-bold" style="padding: 0 7px;">发布选项</div>
+                                     </div>
+                                        </div>                                                                                         
+                                      
+                                      <div class="uk-width-1-1 uk-form-row">
+                                       <div class="uk-grid">
+                                        <div class="uk-width-3-10">
+                                          <div class="uk-h3 uk-button-large uk-width-1-1 uk-text-bold" style="padding: 0 7px;">页面状态</div>
+                                        </div>
+                                         <div class="uk-width-7-10">
+                                            <select class="uk-form-large uk-width-1-1" name="post_status">
+                                              <option value="0">已审核</option>
+                                              <option value="1">待审核</option>
+                                              <option value="2">已冻结</option>
+                                              <option value="3">已回收</option>
+                                            </select>
+                                         </div>
+                                       </div>
+                                      </div>
+                                      <!--
+                                      <div class="uk-width-1-1 uk-form-row">
+                                       <div class="uk-grid">
+                                        <div class="uk-width-1-5">
+                                          <div class="uk-h3 uk-button-large uk-width-1-1 uk-text-bold" style="padding: 0 7px;">状态</div>
+                                        </div>
+                                         <div class="uk-width-3-10">
+                                            <select class="uk-form-large uk-width-1-1">
+                                              <option value="">已审核</option>
+                                              <option value="">待审核</option>
+                                              <option value="">已冻结</option>
+                                              <option value="">已回收</option>
+                                            </select>
+                                         </div>
+                                        <div class="uk-width-1-5">
+                                          <div class="uk-h3 uk-button-large uk-width-1-1 uk-text-bold" style="padding: 0 7px;">可视</div>
+                                        </div>
+                                         <div class="uk-width-3-10">
+                                            <select class="uk-form-large uk-width-1-1" name="data_visible">
+                                              <option value="public">公开</option>
+                                              <option value="private">私有</option>
+                                              <option value="locked">加密</option>
+                                            </select>
+                                         </div>
+                                       </div>
+                                      </div>
+                                      
+                                      <div class="uk-width-1-1 uk-form-row" id="cmd_visibility">
+                                       <div class="uk-grid">
+                                        <div class="uk-width-3-10">
+                                          <div class="uk-h3 uk-button-large uk-width-1-1 uk-text-bold" style="padding: 0 7px;">访问密码</div>
+                                        </div>
+                                         <div class="uk-width-7-10">
+                                           <div class="uk-form-password">
+                                              <input type="text" placeholder="访问密码..." class="uk-form-large uk-width-1-1">
+                                              <a href="" class="uk-form-password-toggle" data-uk-form-password="{lblShow:'显示密码', lblHide:'隐藏密码'}">隐藏密码</a>
+                                           </div>
+                                         </div>
+
+                                       </div>
+                                      </div>
+                                      
+                                      <div class="uk-width-1-1 uk-form-row">
+                                       <div class="uk-grid">
+                                        <div class="uk-width-3-10">
+                                          <div class="uk-h3 uk-button-large uk-width-1-1 uk-text-bold" style="padding: 0 7px;">发布时间</div>
+                                        </div>
+                                         <div class="uk-width-7-10">
+                                            <select class="uk-form-large uk-width-1-1" name="data_date_option">
+                                              <option value="current">立即</option>
+                                              <option value="custom">自定义</option>
+                                            </select>
+                                         </div>
+                                       </div>
+                                      </div>
+                                      
+                                      <div class="uk-width-1-1 uk-form-row" id="cmd_date">
+                                       <div class="uk-grid">
+                                        <div class="uk-width-5-10">
+                            	          <div class="uk-form-icon">
+                            	              <i class="uk-icon-calendar"></i>
+                            	              <input type="text" placeholder="发布日期..." class="uk-form-large uk-width-1-1" name="data_date">
+                            	          </div>
+                                        </div>
+                                        <div class="uk-width-1-10 uk-text-center uk-text-bold" style="line-height: 40px">@</div>
+                                         <div class="uk-width-2-5">
+                            	          <div class="uk-form-icon">
+                            	              <i class="uk-icon-clock-o"></i>
+                            	              <input type="text" placeholder="发布日期..." class="uk-form-large uk-width-1-1" name="data_time">
+                            	          </div>
+                                         </div>
+                                       </div>
+                                      </div>
+                                      -->
+                                      
+                                      <div class="uk-width-1-1 uk-form-row">
+                                       <div class="uk-grid">
+                                        <div class="uk-width-3-10">
+                                          <div class="uk-h3 uk-button-large uk-width-1-1 uk-text-bold" style="padding: 0 7px;">页面分类</div>
+                                        </div>
+                                         <div class="uk-width-7-10">
+                                            <select class="uk-form-large uk-width-1-1" name="post_class_id">
+                                            {$class}
+                                            </select>
+                                         </div>
+                                       </div>
+                                      </div>
+                                         
+                                      <div class="uk-width-1-1 uk-form-row">
+                                       <div class="uk-grid">
+                                        <div class="uk-width-3-10">
+                                          <div class="uk-h3 uk-button-large uk-width-1-1 uk-text-bold" style="padding: 0 7px;">页面封面</div>
+                                        </div>
+                                         <div class="uk-width-7-10">
+                                            <select class="uk-form-large uk-width-1-1" name="post_face">
+                                             <option value="0">未设置</option>
+                                              <volist name="media" id="media">
+                                              <option value="{$media.upload_id}">{$media.upload_name}</option>
+                                              </volist>
+                                            </select>
+                                         </div>
+                                       </div>
+                                      </div>
+                                          
+                                      <div class="uk-width-1-1 uk-form-row">
+                                       <div class="uk-grid"><!--
+                                         <div class="uk-width-4-10">
+                                           <a class="uk-button uk-button-danger  bg-red uk-button-large  uk-width-1-1 cmd-trash">移到回收站</a>
+                                         </div>
+                                         <div class="uk-width-3-10">
+                                           <a class="uk-button text-white bg-light-green uk-button-large uk-width-1-1 cmd-save" style="box-shadow: inset 0 0 5px rgba(0,0,0,.05); text-shadow: 0 -1px 0 rgba(0,0,0,.1);">存草稿</a>
+                                         </div>-->
+                                         <div class="uk-width-3-10"></div>
+                                         <div class="uk-width-7-10">
+                                           <a class="uk-button uk-button-primary bg-light-blue uk-button-large uk-width-1-1 cmd-submit">发布</a>
+                                         </div>
+                                       </div>
+                                      </div>
+                                      
+                                  <!--    
+                                  <div class="uk-width-1-1 uk-margin-top">
+                                     <div class="uk-form-row">
+                                       <div class="uk-h3 uk-button-large uk-width-1-1 uk-text-bold" style="padding: 0 7px;border-bottom: 1px solid #eee;margin-bottom: 8px;">页面封面
+                                         <div class="uk-icon-caret-square-o-down uk-float-right cmd-face-toggle" style="line-height: 40px;width: 40px;text-align: right;"></div>
+                                         <div class="uk-icon-caret-square-o-up uk-float-right cmd-face-toggle" style="line-height: 40px;width: 40px;text-align: right;display: none;"></div>
+                                       </div>
+                                     </div>
+                                  </div>
+                                    
+                                  <div class="uk-width-1-1" id="cmd_media" style="display: none;">
+                                     <div class="uk-placeholder uk-width-1-1 uk-text-center" style="height: 240px;line-height: 200px;border-width: 3px;">
+                                       <a id="cmd-choose-media" data-uk-modal="{target:'#cms_media', bgclose: true}">
+                                         <i class="uk-icon-cloud-upload uk-icon-medium uk-text-muted uk-margin-small-right"></i> 选择或者上传图像。
+                                       </a>
+                                     </div>
+                                  </div>
+                                  -->
+                                      
+                                  <!--
+                                  <div class="uk-width-1-1 uk-margin-top">
+                                     <div class="uk-form-row">
+                                       <div class="uk-h3 uk-button-large uk-width-1-1 uk-text-bold" style="padding: 0 7px;border-bottom: 1px solid #eee;margin-bottom: 8px;">页面标签</div>
+                                     </div>
+                                  </div>
+                                    
+                                    
+                                  <div class="uk-width-1-1 uk-form-row">
+                                    <div class="uk-grid">
+                                      <div class="uk-form-icon uk-width-4-5">
+                            	       <i class="uk-icon-tags"></i>
+                            	       <input type="text" placeholder="多个标签用“,”分割..." class="uk-form-large uk-width-1-1" name="tag_input">
+                            	      </div> 
+                                       <div class="uk-form-icon uk-width-1-5">
+                            	         <a class="uk-button uk-button-primary bg-light-blue uk-button-large  uk-width-1-1" style="padding: 0 8px" id="tag_add">添加</a>
+                            	      </div> 
+                                    </div>
+                                  </div>
+                                   
+                                   <div class="uk-width-1-1 uk-margin-top">
+                                     <div class="uk-placeholder uk-width-1-1 cmd-tag-area" style="border-width: 3px; padding: 8px;">
+                                       
+                                       
+                                     </div>
+                                  </div>  
+                                    -->
+                                  
+                                     
+                                     
+                                     
+                                      
+
+                                      
+                                      
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    
+    <div id="cms_media" class="uk-modal">
+    <div class="uk-modal-dialog uk-modal-dialog-large" style="width: calc(100% - 100px)">
+       <a class="uk-modal-close uk-close" style="margin: -5px -5px 0 0; font-size: 24px;"></a>
+      <div class="uk-modal-header uk-h2" style="padding: 8px; margin-bottom: 8px;">媒体管理</div>
+      <div class="uk-modal-content  uk-form" style="margin: 0 -12px;">
+        <div class="uk-overflow-container">
+          <div class="uk-grid">
+            <div class="uk-width-4-5" style="width: calc(100% - 320px);">
+             
+              <div class="uk-width-1-1 uk-form-row">
+               <div class="uk-grid">
+                  <div class="uk-width-1-2">
+                     <select class="uk-form-large uk-margin-right" name="data_filetype">
+                       <option value="all">所有文件</option>
+                       <option value="image">所有图像</option>
+                       <option value="audio">所有音频</option>
+                       <option value="video">所有视频</option>
+                       <option value="document">所有文档</option>
+                       <option value="other">其他文件</option>
+                     </select>
+                     
+                     <select class="uk-form-large uk-margin-right" name="data_file_date">
+                       <option value="">所有时间</option>
+                       <option value="">2015年5月</option>
+                       <option value="">2015年4月</option>
+                       <option value="">2015年3月</option>
+                       <option value="">2015年2月</option>
+                       <option value="">2015年1月</option>
+                       <option value="">2014年12月</option>
+                     </select>
+                     
+                     <a class="uk-button uk-button-primary bg-light-blue uk-button-large" style="vertical-align: top;">筛选</a>
+                  </div>
+                  
+                  <div class="uk-width-1-2">
+                    <div class="uk-float-right">
+                      <a class="uk-button uk-button-large" style="vertical-align: top;"><span class="uk-icon-th"></span></a>
+                      <a class="uk-button uk-button-large" style="vertical-align: top;"><span class="uk-icon-list"></span></a>
+                     
+                     
+                      <div class="uk-form-icon">
+                        <i class="uk-icon-search"></i>
+                        <input type="text" placeholder="搜索文件..." class="uk-form-large" name="media_search">
+                      </div> 
+                      <a class="uk-button uk-button-primary bg-green uk-button-large" style="vertical-align: top;">搜索</a>
+                    </div>
+                     
+                  </div>
+               </div>
+              </div>
+              
+              <div class="uk-width-1-1" style="margin-top: 16px;">
+              <style>
+                .media-file {
+                  /*width: 125px;
+                  height: 125px;*/
+                  border: 1px solid #ccc;
+                  box-shadow: 0 0 3px #bbb;
+                  position: relative;
+                }
+                
+                @media (min-width: 2559px) {
+                  .media-file { width: 134px; height: 134px; }
+                }
+                
+                @media (max-width: 2559px) and (min-width: 1920px) {
+                  .media-file { width: 127px; height: 127px; }
+                }
+                
+                @media (max-width: 1919px) and (min-width: 1600px) {
+                  .media-file { width: 122px; height: 122px; }
+                }
+                
+                @media (max-width: 1599px) {
+                  .media-file { width: 125px; height: 125px; }
+                }
+                    
+                .media-width {
+                  margin-bottom: 8px;
+                }
+                
+                .media-bg {
+                  background-position: center;
+                  background-size: contain;
+                  background-repeat: no-repeat;
+                }
+                
+                .media-file-slect {
+                    width: 32px;
+                    height: 32px;
+                    background-color: #1976d2;
+                    top: -8px;
+                    right: -8px;
+                    position: absolute;
+                }
+                
+                .media-file-slect > [class*=uk-icon-] {
+                    width: 28px;
+                    height: 28px;
+                    border: 1px solid #fff;
+                    margin: 2px;
+                    line-height: 26px;
+                    text-align: center;
+                    background-color: #1976d2;
+                    color: #fff;
+                    font-size: 18px;
+                }
+              </style>
+              <div class="uk-grid media-filemanager">
+                 <div class="media-width">
+                   <div class="media-file media-bg" data-bgsrc="img/file-1.jpg">
+                     <div class="media-file-slect"><div class="uk-icon-check"></div></div>
+                   </div>
+                  </div>
+                 <div class="media-width"><div class="media-file media-bg" data-bgsrc="img/file-2.jpg"></div></div>
+                 <div class="media-width"><div class="media-file media-bg" data-bgsrc="img/file-3.png"></div></div>
+                 <div class="media-width"><div class="media-file media-bg" data-bgsrc="img/file-4.png"></div></div>
+                 <div class="media-width"><div class="media-file media-bg" data-bgsrc="img/file-5.png"></div></div>
+                 <div class="media-width"><div class="media-file"></div></div>
+                 <div class="media-width"><div class="media-file"></div></div>
+                 <div class="media-width"><div class="media-file"></div></div>
+                 <div class="media-width"><div class="media-file"></div></div>
+                 <div class="media-width"><div class="media-file"></div></div>
+                 <div class="media-width"><div class="media-file"></div></div>
+                 <div class="media-width"><div class="media-file"></div></div>
+                  
+              </div>
+              </div>
+              
+              
+              
+            </div>
+            <div class="uk-width-1-5" style="width: 320px;">
+              <div class="block"></div>
+            </div>
+          </div>
+        
+        
+        </div>
+        
+        <div class="uk-width-1-1">
+          <ul class="uk-pagination" data-uk-pagination="{items:320, itemsOnPage: 32}"></ul>
+        </div>
+      </div>
+      <div class="uk-modal-footer uk-text-right" style="padding: 8px; margin-top: 8px;overflow: hidden;">
+        <a class="tab t1 uk-button-danger bg-red text-white" style="margin-left: -8px;"><span class="uk-icon-upload"></span>媒体上传</a>
+        <a class="tab t2 text-black"><span class="uk-icon-film"></span>浏览媒体</a>
+        <style>
+          .tab {
+              min-width: 4em;
+              float: left;
+              padding: 0 12px;
+              line-height: 46px;
+              margin: -8px 0;
+              border-right: 1px solid #ccc;
+              font-size: 16px;
+          }
+          
+          .tab > [class*=uk-icon-] {
+              margin-right: 8px;
+              font-size: 20px;
+          }
+        </style>
+         <!--
+        <button class="uk-button uk-button-primary">确定</button>
+        <button class="uk-button uk-modal-close">取消</button>
+         -->
+         <button class="uk-button uk-button-primary">设为封面</button>
+      </div>
+    </div>
+    </div>
+ 
+    <script src="__PUBLIC__/plugins/jquery/jquery-1.11.2.min.js"></script>
+    <script src="__PUBLIC__/plugins/uikit/js/uikit.min.js"></script>
+    <script src="__PUBLIC__/plugins/uikit/js/components/tooltip.min.js"></script>
+    <script src="__PUBLIC__/plugins/uikit/js/components/htmleditor.js"></script>
+    <script src="__PUBLIC__/plugins/uikit/js/components/form-password.min.js"></script>
+    <script src="__PUBLIC__/plugins/uikit/js/components/datepicker.min.js"></script>
+    <script src="__PUBLIC__/plugins/uikit/js/components/pagination.min.js"></script>
+    <!--script src="__PUBLIC__/plugins/uikit/js/components/timepicker.min.js"></script>
+    <script src="__PUBLIC__/plugins/uikit/js/components/autocomplete.min.js"></script-->
+
+    <script src="__PUBLIC__/plugins/codemirror/lib/codemirror.js"></script>
+    <script src="__PUBLIC__/plugins/codemirror/mode/markdown/markdown.js"></script> 
+    <script src="__PUBLIC__/plugins/codemirror/addon/mode/overlay.js"></script> 
+    <script src="__PUBLIC__/plugins/codemirror/mode/xml/xml.js"></script> 
+    <script src="__PUBLIC__/plugins/codemirror/mode/gfm/gfm.js"></script> 
+    
+    <script src="__PUBLIC__/plugins/highlight/highlight.pack.js"></script>
+    <script src="__PUBLIC__/js/marked.js"></script> 
+    <script src="__PUBLIC__/js/admin.js"></script> 
+    
+    <script>
+      $(function(){
+        /*
+        console.log('jQuery 版本：'+ $().jquery);
+        console.log('UIkit  版本：'+ UIkit.version);
+        
+        console.log('UIkit  组件：Tooltip');
+        console.log('UIkit  组件：HtmlEditor');
+        console.log('UIkit  组件：Form-Password');
+        console.log('UIkit  组件：DatePicker');
+        */
+        
+        //console.log('UIkit  组件：TimePicker');
+        //console.log('UIkit  组件：AutoComplete');
+        
+        
+        // ***** 初始化UIkit组件  ***** //
+        //编辑器设置
+        var editor_height = $('.cms-content-wrap').height() - 322;
+        $('.cms>.cms-right>.cms-content>.cms-content-wrap').css('background-color', 'transparent');
+        
+        var editor = UIkit.htmleditor('[name="data_content"]', { 
+          markdown: true,
+          mode:'split',
+          maxsplitsize: 1599,
+          height: editor_height,
+        });
+        window.editor = editor;
+        
+        $(window).on('resize', function(){
+          editor_height = $('.cms-content-wrap').height() - 342;
+          editor.htmleditor.find('.CodeMirror-wrap, .uk-htmleditor-preview').height(editor_height);
+          //console.log(editor_height);
+        });
+        
+        
+            
+        
+        
+        var datepicker = UIkit.datepicker('[name="data_date"]', {
+          weekstart: 0,
+          i18n: {
+            months: ['元月','二月','三月','四月','五月','六月','七月','八月','九月','十月','冬月','腊月'],
+            weekdays: ['日','一','二','三','四','五','六' ],
+          },
+          format: 'YYYY/MM/DD',
+        });
+        
+        /*
+        var timepicker = UIkit.timepicker('[name="data-time"]', {
+          format: '24h',
+        });
+        */
+        
+        //侧边栏菜单初始化
+        $('.sidebar-post').addClass('active').find('.uk-icon-angle-right').removeClass('uk-icon-angle-right').addClass('uk-icon-angle-down');
+        $('.sidebar-post-edit').addClass('active');
+        
+        // ***** 监视行为  ***** //
+        
+        // 点击[可视]选择[加密]弹出附加密码填写栏。
+        $('[name="data_visible"]').on('change', function(){
+          if ($(this).val() == 'locked' ) $('#cmd_visibility').slideDown(300);
+          else $('#cmd_visibility').slideUp(300);
+        });
+        
+        // 点击[发布时间]选择[自定义]弹出附加自定义时间栏目。
+        $('[name="data_date_option"]').on('change', function(){
+          if ($(this).val() == 'custom' ) $('#cmd_date').slideDown(300);
+          else $('#cmd_date').slideUp(300);
+        });
+        
+        //点击[添加]按钮在下放区域显示标签
+        var tagInit = false;
+        $('.cmd-tag-area').html('');
+        function trim(str,is_global){
+          var result;
+             if (is_global !== undefined) is_global = is_global.toLowerCase();
+          result = str.replace(/(^\s+)|(\s+$)/g,"");
+          if(is_global =="g"){
+            result = result.replace(/\s/g,"");
+          }
+          return result;
+        }
+        
+        $('#tag_add').on('click', function(){
+            var tags = $('[name="tag_input"]').val(),
+                  tmp = '';
+                  tags = tags.split(',');
+                  $('[name="tag_input"]').val('');
+                  
+            $.each(tags, function(index, item){
+              item = trim(item);
+              
+            if (item != '') {
+              tmp += '<div class="uk-badge cms-tag" style="padding: 4px 8px 4px 4px; margin: 0 4px 4px 0;"><a class="uk-icon-close cmd-tag-delete" style="margin-right: 4px;"></a><span class="data-tag-value">'+item+'</span><input type="hidden" name="data_tag[]" value="'+item+'"></div>';
+              }
+            });
+            tmp += $('.cmd-tag-area').html();
+            $('.cmd-tag-area').html(tmp);
+          
+            //if (!tagInit) {
+              $('.cmd-tag-delete').on('click', function(){
+                $(this).parent().remove();
+              });
+            //}
+          tagInit = true;
+        });
+        
+        $('.cmd-tag-delete').on('click', function(){
+          $(this).parent().remove();
+        });
+        
+        $('[name="tag_input"]').on('keydown', function(e){
+          //console.log(e.keyCode);
+          if (e.keyCode == 13) $('#tag_add').trigger('click');
+        });
+        
+        //媒体上传窗口
+        var media_toggle = false;
+        $('.cmd-face-toggle').on('click', function(){
+          if (!media_toggle) {
+            $('#cmd_media').slideDown(800);
+          } else {
+            $('#cmd_media').slideUp(800);
+          }
+          $('.cmd-face-toggle').toggle();
+          media_toggle = (!media_toggle);
+        });
+        
+        $('[data-uk-pagination]').on('select.uk.pagination', function(e, pageIndex){
+          console.log('You have selected page: ' + (pageIndex+1));
+        });
+        
+        
+        $('[data-bgsrc]').each(function(index){
+          var c= $(this),
+              bgsrc = c.attr('data-bgsrc');
+              c.css('background-image', 'url('+bgsrc+')');
+        });
+        
+        $('.cmd-submit').on('click', function(){/*
+          var current=$(this),
+              url='{:U("_Dao/Post/delete/id")}/' +current.attr('data-delete');
+          
+            $.get(url, function(data, status, xhr){
+              if (status == 'success') {
+                UIkit.notify('# '+data.message, {status: data.class});
+              }
+            });*/
+          console.log("Click!");
+          $("form").submit();
+        });
+        
+        //setTimeout(function(){
+        $('[name="post_class_id"]').val({$post.post_class_id|default=1});
+        $('[name="post_status"]').val({$post.post_status|default=0});
+        $('[name="post_face"]').val({$post.post_face|default=0});
+        //}, 800);
+
+        
+      });
+    </script>
+  </body>
+</html>

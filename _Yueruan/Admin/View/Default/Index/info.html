@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <!--  http://bigc.at/ios-webapp-viewport-meta.orz -->
+  <meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta content="telephone=no" name="format-detection">
+  <meta name="apple-mobile-web-app-title" content="道CMS">
+  <title>我的网站 &rsaquo;&rsaquo; Dao CMS 内容管理系统 @Powered By 悦软工作室(Yueruan Studio)</title>
+  <link href="__PUBLIC__/plugins/uikit/css/uikit.almost-flat.min.css" rel="stylesheet">     
+  <link href="__PUBLIC__/plugins/uikit/css/components/tooltip.almost-flat.min.css" rel="stylesheet">
+  <link href="__PUBLIC__/css/admin.css" rel="stylesheet"> 
+</head>
+
+  <body class="cms">
+    <include file="./_Yueruan/Admin/View/Default/Include/sidebar.html" />
+    <div class="cms-right">
+      <include file="./_Yueruan/Admin/View/Default/Include/top.html" />
+      <div class="cms-content">
+        <div class="cms-content-wrap">
+          <h1>PHP信息</h1>
+          <div class="uk-container uk-container-center uk-fw">
+            <div class="uk-grid">
+              <iframe src='{:U("_Dao/Index/pinfo")}' frameborder='0' class="uk-width-1-1"></iframe>
+</div>
+      </div>
+    </div>
+  </div>
+    </div>
+    <script src="__PUBLIC__/plugins/jquery/jquery-1.11.2.min.js"></script>
+    <script src="__PUBLIC__/plugins/uikit/js/uikit.min.js"></script>
+    <script src="__PUBLIC__/plugins/uikit/js/components/tooltip.min.js"></script>
+    <script src="__PUBLIC__/plugins/uikit/js/components/notify.min.js"></script>
+    <script src="__PUBLIC__/js/admin.js"></script> 
+    <script>
+      $(function(){
+        //$.getScript('__PUBLIC__/js/script.admin.post.js');
+        console.log('jQuery 版本：'+ $().jquery);
+        console.log('UIkit  版本：'+ UIkit.version);
+        
+        //侧边栏菜单初始化
+        $('.sidebar-dashboard').addClass('active');
+        $('.sidebar-dashboard-phpinfo').addClass('active');
+        
+        $("iframe").height($(".cms-content-wrap").height()-49);
+        
+        var iframe = $("iframe").get(0);
+        if (iframe.attachEvent){
+          iframe.attachEvent("onload", function(){
+            $("iframe").contents().find("table").css("width", "100%");
+            $("iframe").contents().find("hr").css("width", "100%");
+            $("iframe").contents().find("body").css("background-color", "#eee");
+          });
+        } else {
+          iframe.onload = function(){
+            $("iframe").contents().find("table").css("width", "100%");
+            $("iframe").contents().find("hr").css("width", "100%");
+            $("iframe").contents().find("body").css("background-color", "#eee");
+          };
+        }
+        
+        $(window).on("resize", function(){
+          $("iframe").height($(".cms-content-wrap").height()-49);
+        });
+      });
+    </script>
+  </body>
+</html>

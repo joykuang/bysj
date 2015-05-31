@@ -20,17 +20,8 @@ return array(
   'DB_PWD'      =>    'joy',
   'DB_PREFIX'   =>    'cms_',
   
-  
-  'SHOW_PAGE_TRACE' => true,
-  'TRACE_PAGE_TABS' => array(
-    'base' => '基本',
-    'file' => '文件',
-    'think' => '流程',
-    'error' => '错误',
-    'sql' => 'SQL',
-    'debug' => '调试',
-    'user' => '用户',
-  ),
-  'TRACE_PAGE_SAVE' => true,
+  //模块名映射替换（/ROOT/Admin => /ROOT/_Dao; 如此前者就不能访问了。）
   'URL_MODULE_MAP' => array('_dao' => 'admin'),
+  'URL_MODEL' => 2, //URL路径模式
+  'URL_HTML_SUFFIX'=>'', //伪静态后缀
 );

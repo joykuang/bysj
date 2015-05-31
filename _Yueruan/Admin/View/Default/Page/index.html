@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <!-- http://bigc.at/ios-webapp-viewport-meta.orz -->
+  <meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta content="telephone=no" name="format-detection">
+  <meta name="apple-mobile-web-app-title" content="道CMS">
+  <!--link rel="Shortcut Icon" href=" http://www.letv.com/favicon.ico" />
+  <link rel="apple-touch-icon-precomposed" href="http://i1.letvimg.com/img/201310/09/appLetv.png"/-->
+  <title>我的网站 &rsaquo;&rsaquo; Dao CMS 内容管理系统 @Powered By 悦软工作室(Yueruan Studio)</title>
+  <link href="__PUBLIC__/plugins/uikit/css/uikit.almost-flat.min.css" rel="stylesheet">     
+  <link href="__PUBLIC__/plugins/uikit/css/components/tooltip.almost-flat.min.css" rel="stylesheet">
+  <link href="__PUBLIC__/plugins/uikit/css/components/notify.almost-flat.min.css" rel="stylesheet">
+  <link href="__PUBLIC__/css/admin.css" rel="stylesheet"> 
+  </head>
+
+  <body class="cms">
+    <include file="./_Yueruan/Admin/View/Default/Include/sidebar.html" />
+    <div class="cms-right">
+      <include file="./_Yueruan/Admin/View/Default/Include/top.html" />
+      <div class="cms-content">
+        <div class="cms-content-wrap">
+          <h1>所有页面</h1>
+          <div class="uk-container uk-container-center uk-fw">
+            <div class="uk-grid">
+              <div class="uk-width-1-1 uk-margin-bottom">
+                <div class="uk-alert uk-alert-small" data-uk-alert>
+                  <a class="uk-alert-close uk-close"></a>
+                  <p>欢迎使用道&middot;内容管理系统（DaoCMS）,您可以点击这里快速熟悉使用本系统的基本功能，又或者点击下面任务进行下一步操作。</p>
+                </div>
+              </div>
+
+              <div class="uk-width-1-1 uk-margin-bottom">
+                <div class="uk-panel uk-panel-box uk-form">
+                  <div class="uk-form-row manager-toolbar">
+                    <select>
+                      <option>批量操作</option>
+                      <option>全部删除</option>
+                      <option>全部审核</option>
+                      <option>全部冻结</option>
+                    </select>
+                    
+                    <button class="uk-button uk-margin-right" type="button" >执行</button>
+                    <!--
+                    <select>
+                      <option>全部日期</option>
+                      <option>全部删除</option>
+                      <option>全部审核</option>
+                      <option>全部冻结</option>
+                    </select>
+                    <select>
+                      <option>所有分类</option>
+                      <option>全部删除</option>
+                      <option>全部审核</option>
+                      <option>全部冻结</option>
+                    </select>
+                    <button class="uk-button uk-margin-right" type="button" >筛选</button>
+                    
+                    <div class="uk-float-right">
+                      <a href="#" class="uk-button uk-button-primary" title="列表" data-uk-tooltip><i class="uk-icon-th-list"></i></a>
+                      <a href="#" class="uk-button"><i class="uk-icon-columns" title="拆分" data-uk-tooltip></i></a>
+                      <a href="#" class="uk-button"><i class="uk-icon-th-large" title="缩略图" data-uk-tooltip></i></a>
+                    </div>
+                    -->
+                  </div>
+                </div>
+              </div>
+
+              <div class="uk-width-1-1 uk-margin-bottom uk-form">
+                <div class="uk-panel uk-panel-box">
+                  <table class="uk-table uk-table-hover uk-table-striped">
+                    <thead>
+                      <tr>
+                        <th width="4%"><input type="checkbox" id="selectAll"></th>
+                        <th width="26%">页面标题</th>
+                        <th width="8%">作者</th>
+                        <th width="8%">模板类型</th>
+                        <!--th width="8%">分类目录</th-->
+                        <th width="16%">时间</th>
+                        <th width="8%">状态</th>
+                        <th width="8%">封面</th>
+                        <th width="14%">操作</th>
+                      </tr>
+                    </thead>
+
+                    <tbody>
+                      <volist name="post" id="post">
+                      <tr>
+                        <td><input type="checkbox" name="post_id[]" value="{$post.post_id}"></td>
+                        <td>{$post.post_title}</td>
+                        <td>{$post.post_author_id|getData='user','nickname'}</td>
+                        <td><!--{$post.post_type_id}-->
+                          <eq name="post.post_type_id" value="1">
+                            <span class="uk-icon-file-text"></span> 日志
+                            <else />
+                            其他
+                          </eq>
+                        </td>
+                        <!--td>{$post.post_class_id|getData='class','title'}</td-->
+                        <td><span title='发布日期：{$post.post_date|strtotime|date="Y年m月d日",###}<br/>更新日期：{$post.post_date|strtotime|date="Y年m月d日",###}' data-uk-tooltip="{pos:'right'}">{$post.post_date|strtotime|date="Y年m月d日",###}</span></td>
+                        <td><!-- Post Status: {$post.post_status} -->
+                          <if condition='$post.post_status eq "0" '>
+                            <div class="uk-badge uk-badge-success">已发布</div>
+                          </if>
+                          
+                          <if condition='$post.post_status eq "1" '>
+                            <div class="uk-badge uk-badge-warning">已限制</div>
+                          </if>
+                          
+                          <if condition='$post.post_status eq "2" '>
+                            <div class="uk-badge uk-badge-danger">已冻结</div>
+                          </if>
+                          
+                          <if condition='$post.post_status eq "4" '>
+                            <div class="uk-badge">已回收</div>
+                          </if>
+                        
+                        </td>
+                        <td>
+                          <eq name="post.post_face" value="0">
+                            <span class="uk-icon-file-photo-o text-grey"></span> 未设置
+                            <else />
+                            <a href="javascript: UIkit.modal.confirm('<img src={$post.post_face|getData=###,"media","url"}><h3>{$post.post_face|getData=###,"media","name"}</h3>');"><span class="uk-icon-file-photo-o text-deep-orange"></span> 已设置</a>
+                          </eq>
+                        </td>
+                        
+                        <td>
+                          <a class="cmd-edit" data-edit="{$post.post_id}" href="{:U('/_Dao/Page/edit/id')}/{$post.post_id}"><span class="uk-icon-edit"></span> 编辑</a>&nbsp;&nbsp;
+                          <a class="cmd-delete uk-text-danger" data-delete="{$post.post_id}"><span class="uk-icon-trash"></span> 删除</a>
+                        </td>
+                      </tr>
+                      </volist>
+                      </tbody>
+                  </table>
+                  
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="__PUBLIC__/plugins/jquery/jquery-1.11.2.min.js"></script>
+    <script src="__PUBLIC__/plugins/uikit/js/uikit.min.js"></script>
+    <script src="__PUBLIC__/plugins/uikit/js/components/tooltip.min.js"></script>
+    <script src="__PUBLIC__/plugins/uikit/js/components/notify.min.js"></script>
+    <script src="__PUBLIC__/js/admin.js"></script> 
+    <script>
+      $(function(){
+        console.log('jQuery 版本：'+ $().jquery);
+        console.log('UIkit  版本：'+ UIkit.version);
+        
+        //侧边栏菜单初始化
+        $('.sidebar-post').addClass('active').find('.uk-icon-angle-right').removeClass('uk-icon-angle-right').addClass('uk-icon-angle-down');
+        $('.sidebar-post-list').addClass('active');
+        
+        
+        
+        
+        
+        $('.cmd-delete').on('click', function(){
+          var current=$(this),
+              url='{:U("_Dao/Post/delete/id")}/' +current.attr('data-delete'),
+              message = '<h3>您确认要删除此记录？</h3>';
+              message += '<p><b class="uk-margin-right">条目</b>'+current.parent().parent().find('td:nth-child(2)').text()+'<br>',
+              message += '<b class="uk-margin-right">分类</b>'+current.parent().parent().find('td:nth-child(5)').text()+'<br>', 
+              message += '<b class="uk-margin-right">作者</b>'+current.parent().parent().find('td:nth-child(3)').text()+'<br>', 
+              message += '<b class="uk-margin-right">时间</b>'+current.parent().parent().find('td:nth-child(6)').text()+'</p>',
+          
+          UIkit.modal.confirm(message,function(){
+            $.get(url, function(data, status, xhr){
+              if (status == 'success') {
+                UIkit.notify('# '+data.message, {status: data.class});
+                current.parent().parent().slideUp(800, function(){
+                  $(this).remove();
+                });
+              }
+            });
+          });
+          
+        });
+        
+        
+        //Debug
+        $('.cms-content-wrap').css('background-color', 'transparent');
+        
+      });
+    </script>
+  </body>
+</html>

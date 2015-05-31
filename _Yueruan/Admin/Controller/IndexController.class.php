@@ -8,72 +8,21 @@ class IndexController extends Controller {
     }
 
     public function index(){
-        echo "服务器系统：" .get_os(). "<br>";
-        echo "服务器软件：" .$_SERVER["SERVER_SOFTWARE"]. "<br>";
-        echo "解析器版本：PHP " .phpversion(). "<br>";        
-        echo "当前浏览器：" .$_SERVER["HTTP_USER_AGENT"]. "<br>";
-        echo "图像库版本：GD " .gd_info()["GD Version"]."<br>";
-        echo "数据库版本：" ."SQLite ".phpversion("sqlite3")."<br>";
-        echo "加速器版本：Zend Engine " .zend_version()."<br>";
-        echo "内存使用率：" .convert(memory_get_usage(true)). " / 8388608 KB";
-
+      
+      $theme = "Blue";
+      if (is_readable(realpath(APP_PATH."Admin/View/".$theme."/"))) $this->theme('Blue')->display();
+      else $this->display();
+      
     }
         
     public function info(){
+        //phpinfo();
+      $this->display();
+    }
+  
+    public function pinfo(){
         phpinfo();
     }
-
-    public function article(){
-        //创建数据库连接实例
-        $article = M('articles');
-        $article_data = $article->limit(8)->select();
-        
-        $i = 1;
-
-        echo '<table>';
-
-        foreach ($article_data as $items) {
-
-            if ($i == 1) {
-
-                echo "<tr><td><b>#count</b></td>";
-
-            foreach ($items as $key => $value) {
-                echo "<td>". $key. "</td>";
-                //echo $value ." ";
-            } echo "</tr>"; }
-
-            echo "<tr><td><b>#" .$i. "</b></td>";
-
-            foreach ($items as $value) {
-                echo "<td>".$value ."</td>";
-            }
-
-            echo "</tr>";
-
-            $i++;
-
-        }
-
-        echo '</table>';
-
-        $this->show(' ','utf-8');
-    }    
-
-    public function update(){
-        
-        $this->show('Application is updating!','utf-8');
-
-    }
-	
-    public function account(){
-        
-        $this->show('您好，您的资产现金剩余：','utf-8');
-		echo '1,000,000,000,000,000 元 <br>';
-		
-		echo ' <img src="/Admin/Index/verify"> ';
-		
-    }	
 	
 	public function verify(){
 		ob_end_clean();
@@ -87,6 +36,12 @@ class IndexController extends Controller {
 		$Verify->entry();
 		
 	}
+  
+    public function json(){
+      echo checkLogin();
+      loadOption();
+      $this->ajaxReturn($option);
+    }
 
 }
 

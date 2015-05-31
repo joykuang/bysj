@@ -233,13 +233,13 @@
         return modal;
     };
 
-    UI.modal.dialog.template = '<div class="uk-modal"><div class="uk-modal-dialog" style="min-height:0;"></div></div>';
+    UI.modal.dialog.template = '<div class="uk-modal"><div class="uk-modal-dialog" style="min-height:0;margin-top:240px;"></div></div>';
 
     UI.modal.alert = function(content, options) {
 
         UI.modal.dialog(([
             '<div class="uk-margin uk-modal-content">'+String(content)+'</div>',
-            '<div class="uk-modal-footer uk-text-right"><button class="uk-button uk-button-primary uk-modal-close">Ok</button></div>'
+            '<div class="uk-modal-footer uk-text-right" style="padding:8px;"><button class="uk-button uk-button-primary uk-modal-close">确定</button></div>'
         ]).join(""), UI.$.extend({bgclose:false, keyboard:false}, options)).show();
     };
 
@@ -249,7 +249,7 @@
 
         var modal = UI.modal.dialog(([
             '<div class="uk-margin uk-modal-content">'+String(content)+'</div>',
-            '<div class="uk-modal-footer uk-text-right"><button class="uk-button uk-button-primary js-modal-confirm">Ok</button> <button class="uk-button uk-modal-close">Cancel</button></div>'
+            '<div class="uk-modal-footer uk-text-right" style="padding:8px;"><button class="uk-button uk-button-primary js-modal-confirm">确定</button> <button class="uk-button uk-modal-close">取消</button></div>'
         ]).join(""), UI.$.extend({bgclose:false, keyboard:false}, options));
 
         modal.element.find(".js-modal-confirm").on("click", function(){
@@ -267,7 +267,7 @@
         var modal = UI.modal.dialog(([
             text ? '<div class="uk-modal-content uk-form">'+String(text)+'</div>':'',
             '<div class="uk-margin-small-top uk-modal-content uk-form"><p><input type="text" class="uk-width-1-1"></p></div>',
-            '<div class="uk-modal-footer uk-text-right"><button class="uk-button uk-button-primary js-modal-ok">Ok</button> <button class="uk-button uk-modal-close">Cancel</button></div>'
+            '<div class="uk-modal-footer uk-text-right" style="padding:8px;"><button class="uk-button uk-button-primary js-modal-ok">确定</button> <button class="uk-button uk-modal-close">取消</button></div>'
         ]).join(""), UI.$.extend({bgclose:false, keyboard:false}, options)),
         input = modal.element.find("input[type='text']").val(value || '');
 

@@ -31,6 +31,7 @@ define('APP_DEBUG',True);
 // 定义应用目录
 //define('APP_PATH','./_Studio/');
 define('APP_PATH','./_Yueruan/');
+define('THINK_PATH', realpath('./_Core/').'/');
 
 // 绑定模块
 //define('BIND_MODULE','Admin');
@@ -41,4 +42,4 @@ define('DEFAULT_MODULE','Home');
 define('DEFAULT_CONTROLLER','Index');
 
 // 引入ThinkPHP入口文件
-require './_Core/ThinkPHP.php';		//ThinkPHP Engine version 3.2.3
+require THINK_PATH.'ThinkPHP.php';		//ThinkPHP Engine version 3.2.3

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <!-- http://bigc.at/ios-webapp-viewport-meta.orz -->
+  <meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta content="telephone=no" name="format-detection">
+  <meta name="apple-mobile-web-app-title" content="道CMS">
+  <!--link rel="Shortcut Icon" href=" http://www.letv.com/favicon.ico" />
+  <link rel="apple-touch-icon-precomposed" href="http://i1.letvimg.com/img/201310/09/appLetv.png"/-->
+  <title>我的网站 &rsaquo;&rsaquo; Dao CMS 内容管理系统 @Powered By 悦软工作室(Yueruan Studio)</title>
+  <link href="/Public/plugins/uikit/css/uikit.almost-flat.min.css" rel="stylesheet">     
+  <link href="/Public/plugins/uikit/css/components/tooltip.almost-flat.min.css" rel="stylesheet">
+  <link href="/Public/plugins/uikit/css/components/notify.almost-flat.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet"> 
+  </head>
+
+  <body class="cms">
+    <?php include("home.sidebar.php"); ?>
+    <div class="cms-right">
+      <?php include("home.top.php"); ?>
+      <div class="cms-content">
+        <div class="cms-content-wrap">
+          <h1>评论管理</h1>
+          <div class="uk-container uk-container-center uk-fw">
+            <div class="uk-grid">
+              <div class="uk-width-1-1 uk-margin-bottom">
+                <div class="uk-alert uk-alert-small" data-uk-alert>
+                  <a class="uk-alert-close uk-close"></a>
+                  <p>欢迎使用道&middot;内容管理系统（DaoCMS）,您可以点击这里快速熟悉使用本系统的基本功能，又或者点击下面任务进行下一步操作。</p>
+                </div>
+              </div>
+
+              <div class="uk-width-1-1 uk-margin-bottom">
+                <div class="uk-panel uk-panel-box uk-form">
+                  <div class="uk-form-row manager-toolbar">
+                    <select>
+                      <option>批量操作</option>
+                      <option>全部删除</option>
+                      <option>全部审核</option>
+                      <option>全部驳回</option>
+                      <option>设为垃圾</option>
+                      <option>全部回收</option>
+                    </select>
+                    
+                    <button class="uk-button uk-margin-right" type="button" >执行</button>
+
+                    <select>
+                      <option>所有评论</option>
+                      <option>已审批</option>
+                      <option>未审核</option>
+                      <option>垃圾评论</option>
+                      <option value="">评论回收站</option>
+                    </select>
+                    <button class="uk-button uk-margin-right" type="button" >筛选</button>               
+                  </div>
+                </div>
+              </div>
+              
+<div class="uk-width-1-1 uk-margin-bottom uk-form">
+                <div class="uk-panel uk-panel-box">
+                  <table class="uk-table uk-table-hover uk-table-striped">
+                    <thead>
+                      <tr>
+                        <th width="3%"><input type="checkbox" id="selectAll"></th>
+                        <th width="17%">作者</th>
+                        <th width="60%">评论</th>
+                        <th width="20%">来源</th>
+                      </tr>
+                    </thead>
+
+                    <tbody>
+                      <tr>
+                        <td><input type="checkbox" name="post_id[]" value="1"></td>
+                        <td>
+                           <div>
+                              <div class="cms-comment-avatar cms-bg data-author" data-bgsrc="./yamamodo.jpg"></div>
+                              <div class="cms-comment-item">
+                                <p class="cms-comment-item-author">Joy Kuang</p>
+                                <p class="cms-comment-item-account">q-cute@163.com</p>
+                              </div>
+                              <div class="cms-comment-item-ip clearfix">来自&nbsp;&nbsp;<span class="uk-icon-desktop"></span>&nbsp;<span class="data-comment-ip">192.168.1.111</span></div>
+                           </div>
+                        </td>
+                        <td>
+                          <p class="cms-comment-meta">回复 <span class="data-comment-towho">Joy Kuang</span> 于 <span class="data-comment-date">2015年5月16日</span></p>
+                          <p class="cms-comment-content">评论内容.............</p>
+                          <p class="cms-comment-operation"><a class="text-orange">驳回</a> | <a class="text-blue">回复</a> | 编辑 | <a class="uk-text-warning">垃圾评论</a> | <a class="uk-text-danger "><span class="uk-icon-trash"></span> 移至回收站</a></p>
+                        </td>
+                        <td>
+                          <p class="cms-comment-source">文章标题文章标题文章标题文章标题</p>
+                          <p class="cms-comment-summary"><span class="cms-comment-count">99</span>&nbsp;&nbsp;<a href="#" class="cms-comment-view">查看文章</a></p>
+                        </td>
+                      </tr>
+                      
+                      
+                      
+                      <tr>
+                        <td><input type="checkbox" name="post_id[]" value="1"></td>
+                        <td>
+                           <div>
+                              <div class="cms-comment-avatar cms-bg data-author" data-bgsrc="./osang.jpg"></div>
+                              <div class="cms-comment-item">
+                                <p class="cms-comment-item-author">Joy Kuang</p>
+                                <p class="cms-comment-item-account">q-cute@163.com</p>
+                              </div>
+                              <div class="cms-comment-item-ip clearfix">来自&nbsp;&nbsp;<span class="uk-icon-desktop"></span>&nbsp;<span class="data-comment-ip">192.168.1.111</span></div>
+                           </div>
+                        </td>
+                        <td>
+                          <p class="cms-comment-meta">回复 <span class="data-comment-towho">Joy Kuang</span> 于 <span class="data-comment-date">2015年5月16日</span></p>
+                          <p class="cms-comment-content">评论内容.............</p>
+                          <p class="cms-comment-operation"><a class="text-orange">驳回</a> | <a class="text-blue">回复</a> | 编辑 | <a class="uk-text-warning">垃圾评论</a> | <a class="uk-text-danger "><span class="uk-icon-trash"></span> 移至回收站</a></p>
+                        </td>
+                        <td>
+                          <p class="cms-comment-source">文章标题文章标题文章标题文章标题</p>
+                          <p class="cms-comment-summary"><span class="cms-comment-count">99</span>&nbsp;&nbsp;<a href="#" class="cms-comment-view">查看文章</a></p>
+                        </td>
+                      </tr>
+                      
+                      <tr>
+                        <td><input type="checkbox" name="post_id[]" value="1"></td>
+                        <td>
+                           <div>
+                              <div class="cms-comment-avatar cms-bg data-author" data-bgsrc="./yamamodo.jpg"></div>
+                              <div class="cms-comment-item">
+                                <p class="cms-comment-item-author">Joy Kuang</p>
+                                <p class="cms-comment-item-account">q-cute@163.com</p>
+                              </div>
+                              <div class="cms-comment-item-ip clearfix">来自&nbsp;&nbsp;<span class="uk-icon-desktop"></span>&nbsp;<span class="data-comment-ip">192.168.1.111</span></div>
+                           </div>
+                        </td>
+                        <td>
+                          <p class="cms-comment-meta">回复 <span class="data-comment-towho">Joy Kuang</span> 于 <span class="data-comment-date">2015年5月16日</span></p>
+                          <p class="cms-comment-content">评论内容.............</p>
+                          <p class="cms-comment-operation"><a class="text-orange">驳回</a> | <a class="text-blue">回复</a> | 编辑 | <a class="uk-text-warning">垃圾评论</a> | <a class="uk-text-danger "><span class="uk-icon-trash"></span> 移至回收站</a></p>
+                        </td>
+                        <td>
+                          <p class="cms-comment-source">文章标题文章标题文章标题文章标题</p>
+                          <p class="cms-comment-summary"><span class="cms-comment-count">99</span>&nbsp;&nbsp;<a href="#" class="cms-comment-view">查看文章</a></p>
+                        </td>
+                      </tr>
+                      
+                      </tbody>
+                  </table>
+                  
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/Public/plugins/jquery/jquery-1.11.2.min.js"></script>
+    <script src="/Public/plugins/uikit/js/uikit.min.js"></script>
+    <script src="/Public/plugins/uikit/js/components/tooltip.min.js"></script>
+    <script src="/Public/plugins/uikit/js/components/notify.min.js"></script>
+    <script src="main.js"></script>
+    <script>
+      $(function(){
+        console.log('jQuery 版本：'+ $().jquery);
+        console.log('UIkit  版本：'+ UIkit.version);
+        
+        //侧边栏菜单初始化
+        $('.sidebar-post').addClass('active').find('.uk-icon-angle-right').removeClass('uk-icon-angle-right').addClass('uk-icon-angle-down');
+        $('.sidebar-post-comment').addClass('active');
+        
+        
+        
+        
+        
+        $('.cmd-delete').on('click', function(){
+          var current=$(this),
+              url='{:U("_Dao/Post/delete/id")}/' +current.attr('data-delete'),
+              message = '<h3>您确认要删除此记录？</h3>';
+              message += '<p><b class="uk-margin-right">条目</b>'+current.parent().parent().find('td:nth-child(2)').text()+'<br>',
+              message += '<b class="uk-margin-right">分类</b>'+current.parent().parent().find('td:nth-child(5)').text()+'<br>', 
+              message += '<b class="uk-margin-right">作者</b>'+current.parent().parent().find('td:nth-child(3)').text()+'<br>', 
+              message += '<b class="uk-margin-right">时间</b>'+current.parent().parent().find('td:nth-child(6)').text()+'</p>',
+          
+          UIkit.modal.confirm(message,function(){
+            $.get(url, function(data, status, xhr){
+              if (status == 'success') {
+                UIkit.notify('# '+data.message, {status: data.class});
+                current.parent().parent().slideUp(800, function(){
+                  $(this).remove();
+                });
+              }
+            });
+          });
+          
+        });
+        
+        $('.cms-content-wrap').css('background-color', 'transparent');
+        $('[data-bgsrc]').each(function(index){
+          var c= $(this),
+              bgsrc = c.attr('data-bgsrc');
+              c.css('background-image', 'url('+bgsrc+')');
+        });
+        
+      });
+    </script>
+  </body>
+</html>

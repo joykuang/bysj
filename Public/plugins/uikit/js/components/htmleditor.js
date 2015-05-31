@@ -396,39 +396,39 @@
             editor.addButtons({
 
                 fullscreen: {
-                    title  : 'Fullscreen',
+                    title  : '全屏',
                     label  : '<i class="uk-icon-expand"></i>'
                 },
                 bold : {
-                    title  : 'Bold',
+                    title  : '粗体',
                     label  : '<i class="uk-icon-bold"></i>'
                 },
                 italic : {
-                    title  : 'Italic',
+                    title  : '斜体',
                     label  : '<i class="uk-icon-italic"></i>'
                 },
                 strike : {
-                    title  : 'Strikethrough',
+                    title  : '划线',
                     label  : '<i class="uk-icon-strikethrough"></i>'
                 },
                 blockquote : {
-                    title  : 'Blockquote',
+                    title  : '引用',
                     label  : '<i class="uk-icon-quote-right"></i>'
                 },
                 link : {
-                    title  : 'Link',
+                    title  : '链接',
                     label  : '<i class="uk-icon-link"></i>'
                 },
                 image : {
-                    title  : 'Image',
+                    title  : '图像',
                     label  : '<i class="uk-icon-picture-o"></i>'
                 },
                 listUl : {
-                    title  : 'Unordered List',
+                    title  : '无序列表',
                     label  : '<i class="uk-icon-list-ul"></i>'
                 },
                 listOl : {
-                    title  : 'Ordered List',
+                    title  : '有序列表',
                     label  : '<i class="uk-icon-list-ol"></i>'
                 }
 
